@@ -5,8 +5,8 @@ Readme Created
 ## Structred Data Inputs - XAI Use Cases
 
 
-| CDSS Output Category | XAI Model Type            | Model Specifity   | XAI model/s                                                                | Clinical Scenario                                                                                                        |
-|---------------------------|---------------------------|-----------------|----------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| CDSS Output Category | XAI Model Type | Model Specifity  | XAI model/s| Clinical Scenario  |
+|----------------------|----------------|---------------|--------------|----------------------------|
 |           |             | |                                                                            |                                                                                                                          |
 | Binnary Calssification    | Post-hoc                  | Model-Agonostic | LIME                                                                       | Sleep apnea prediction - 20 <br/>Breast Cancer Metastasis prediction- 39                                                 |
 |                           |                           |                 |                                                                            | Detection of COVID-19 before the onset of symptoms  - 238                                                                |
