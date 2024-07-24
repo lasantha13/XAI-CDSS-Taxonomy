@@ -3,7 +3,6 @@
 
 ![Project Logo](ai33.png)
 
-
 ## 
 This Taxonomic Guide is designed to support CDSS developers in finding suitable XAI methods for their applications. Commonly used XAI models and related clinical use cases are listed below.
 
@@ -18,7 +17,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 | CDSS Output Category | XAI Model Type | Model Specifity  | XAI model/s| Clinical Scenario  |
 |----------------------|----------------|---------------|----------|----------------------------|
 |           |             | |                                                                            |                                                                                                                          |
-| Binnary Calssification    | Post-hoc                  | Model-Agonostic | LIME                                                                       | Sleep apnea prediction - 20 <br/>Breast Cancer Metastasis prediction- 39                                                 |
+| Binnary Calssification    | Post-hoc                  | Model-Agonostic | LIME                                                                       | [Sleep apnea prediction](https://www.sciencedirect.com/science/article/pii/S1877050922012406)<br/>[Breast Cancer Metastasis prediction](https://doi.org/10.1109/TBME.2023.3282840)                                                 |
 |                           |                           |                 |                                                                            | Detection of COVID-19 before the onset of symptoms  - 238                                                                |
 |                           |                           |                 | Modified LIME                                                              | COVID-19 prediction - 28                                                                                                 |
 |                           |                           |                 | SHAP                                                                       | Predicting Occurrence of Acute Kidney Injury after Cardiac surgery - 21                                                  |
