@@ -1,12 +1,14 @@
-# XAI Taxonomic Guide of Clinical Decision Support Systems
+# XAI Taxonomic Guide for Clinical Decision Support Systems
 
 
 ![Project Logo](ai33.png)
 
 
 ## 
-This Taxonomic Guide is created to support CDSS developers in finding suitable XAI methods for their applications. Commonly used XAI models and related clinical use cases are listed below
-This repository is created as part of Phd project  of Dr Lasantha Ranwaala - University of Suoth Australia 
+This Taxonomic Guide is designed to support CDSS developers in finding suitable XAI methods for their applications. Commonly used XAI models and related clinical use cases are listed below.
+This repository was created as part of the PhD project of Dr. Lasantha Ranwaala, University of South Australia
+
+
 To follow our taxonomy user, need to answer three basic questions about the CDSS they intended to generate explanations .
 1.	What is the input data type of the CDSS?
 2.	What is the output type of the CDSS?
