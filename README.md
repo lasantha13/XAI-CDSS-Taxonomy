@@ -13,6 +13,9 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 2.	What is the output type of the CDSS?
 3.	Does the CDSS require an explanation model that is inherently easy to understand from the start (White box), or can it be added after the model has undergone training (post-hoc)?
 
+![Taxonomic Guide](taxo.png)
+
+
 ### [Clinical Uses: CDSS with Structured Data Inputs](#structured_data)
 ### [Clinicla Uses : CDSS with Imaging Data Inputs](#images)
 ### [XAI Models Details](#xai_1)
