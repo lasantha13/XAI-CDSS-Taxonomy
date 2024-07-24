@@ -1,12 +1,20 @@
-# XAI_taxonomy
-This repository is created as part of Phd project 
-Readme Created 
+# XAI Taxonomic Guide of Clinical Decision Support Systems
 
-## Structred Data Inputs - XAI Use Cases
+
+![Project Logo](ai33.png)
+
+
+## 
+This Taxonomic Guide is created to support CDSS developers in finding suitable XAI methods for their applications. Commonly used XAI models and related clinical use cases are listed below
+This repository is created as part of Phd project  of Dr Lasantha Ranwaala - University of Suoth Australia 
+To follow our taxonomy user, need to answer three basic questions about the CDSS they intended to generate explanations .
+1.	What is the input data type of the CDSS?
+2.	What is the output type of the CDSS?
+3.	Does the CDSS require an explanation model that is inherently easy to understand from the start (White box), or can it be added after the model has undergone training (post-hoc)?
 
 
 | CDSS Output Category | XAI Model Type | Model Specifity  | XAI model/s| Clinical Scenario  |
-|----------------------|----------------|---------------|--------------|----------------------------|
+|----------------------|----------------|---------------|----------|----------------------------|
 |           |             | |                                                                            |                                                                                                                          |
 | Binnary Calssification    | Post-hoc                  | Model-Agonostic | LIME                                                                       | Sleep apnea prediction - 20 <br/>Breast Cancer Metastasis prediction- 39                                                 |
 |                           |                           |                 |                                                                            | Detection of COVID-19 before the onset of symptoms  - 238                                                                |
