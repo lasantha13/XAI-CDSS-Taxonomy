@@ -126,8 +126,215 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 
 
-| Model         | Binnary Calssfication | Multiclass Classification | Funtional Output  | Built-in Interpretability | Post-hoc | Model-Agonostic | Model- specific | Explainable Methods                     |
-|---------------|-----------------------|---------------------------|-------------------|---------------------------|----------|-----------------|-----------------|-----------------------------------------|
-| LIME          | +                     |                           |                   |                           | +        | +               |                 | Feature Importance, Feature Attribution |
-| Modified LIME | +                     |                           |                   |                           | +        | +               |                 | Feature Importance, Feature Attribution |
-| SHAP          | +                     | +                         | +                 |                           | +        | +               |                 | Feature Importance, Feature Attribution |
+
+
+<table>
+    <tr>
+        <td>Model </td>
+        <td colspan="3"> Model Output (Binarry/ Muliclass Classfication/ Funtional)</td>
+        <td colspan="2">Timing of interpretability  </td>
+        <td colspan="2">Model Specificity </td>
+        <td>Explainable Methods  </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>Bi</td>
+        <td>Multi</td>
+        <td>Func</td>
+        <td>Built-in</td>
+        <td>Post-hoc</td>
+        <td>Agonostic</td>
+        <td>specific</td>
+        <td> </td>
+    </tr>
+    <tr>
+        <td>ABA+G</td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>combination of Transition-based Medical Recommendation (TMR) Model and Explainable Argumentation with Assumptions, Preferences, and Goals  </td>
+    </tr>
+    <tr>
+        <td>Anchors</td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Rule-based Explanation </td>
+    </tr>
+    <tr>
+        <td>AnEMIC</td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Rule-based Systems </td>
+    </tr>
+    <tr>
+        <td>Araucana XAI</td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Rule-based Systems </td>
+    </tr>
+    <tr>
+        <td>Ceteris Paribus Survival Profile</td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td>+</td>
+        <td>Feature Importance, Survival Analysis </td>
+    </tr>
+    <tr>
+        <td>Decision tree </td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Rule-based Systems </td>
+    </tr>
+    <tr>
+        <td><a href="https://
+github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>feature importance and visualization techniques </td>
+    </tr>
+    <tr>
+        <td>ELIS5</td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Explanation by Linear Interactions </td>
+    </tr>
+    <tr>
+        <td>Explainable Fold</td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Rule-based Systems </td>
+    </tr>
+    <tr>
+        <td><a href="https://github.com/marcotcr/lime?tab=readme-ov-file">LIME</a></td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Feature Importance, Feature Attribution </td>
+    </tr>
+    <tr>
+        <td>Modified LIME</td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Feature Importance, Feature Attribution </td>
+    </tr>
+    <tr>
+        <td>MVR-GA</td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Rule Extraction </td>
+    </tr>
+    <tr>
+        <td>OVBLR-SFE</td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>Salient Feature Estimation, Bayesian Logistic Regression </td>
+    </tr>
+    <tr>
+        <td>Qlattice</td>
+        <td>+</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Rule-based Systems </td>
+    </tr>
+    <tr>
+        <td>SHAP</td>
+        <td>+</td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>+</td>
+        <td>+</td>
+        <td></td>
+        <td>Feature Importance, Feature Attribution </td>
+    </tr>
+    <tr>
+        <td>SurvLIME</td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td>+</td>
+        <td>Feature Importance, Survival Analysis </td>
+    </tr>
+    <tr>
+        <td>SurvSHAP(t)</td>
+        <td></td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td>+</td>
+        <td></td>
+        <td>+</td>
+        <td>Feature Importance, Survival Analysis </td>
+    </tr>
+</table>
+
+
