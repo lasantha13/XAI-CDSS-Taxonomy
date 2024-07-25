@@ -14,22 +14,22 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 2.	What is the output type of the CDSS?
 3.	Does the CDSS require an explanation model that is inherently easy to understand from the start (White box), or can it be added after the model has undergone training (post-hoc)?
 ```
-![Taxonomic Guide](taxo.png)
+
 
 ### Table of Contents
-1. [Clinical Uses: CDSS with Structured Data Inputs](#structured_data)
-2. [Clinicla Uses : CDSS with Imaging Data Inputs](#images)
-3. [Clinicla Uses : CDSS with Other Data Type Inputs](#images)
-4. [XAI Models : Structured Data inputs](#xai_1)
-5. [XAI Models : Medical imaging inputs](#xai_2)
-6. [XAI Models : MOther Data type inputs](#xai_3)
+1. [Clinical Use Cases: CDSS with Structured Data Inputs](#structured_data)
+2. [Clinicla Use Cases : CDSS with Imaging Data Inputs](#images)
+3. [Clinicla Use Cases : CDSS with Other Data Type Inputs](#images)
+4. [XAI Models : Structured Data Inputs](#xai_1)
+5. [XAI Models : Medical Imaging Inputs](#xai_2)
+6. [XAI Models : Other Data type Inputs](#xai_3)
 
 
 
 
 ## Structured_Data
 ## Clinical Uses : XAI Application for CDSS Models with Structured Data Inputs
-| CDSS Output Category | XAI Model Type | Model Specifity  | XAI model/s| Clinical Scenario  |
+| CDSS Output Category | XAI Model Type | Model Specifity  | XAI Model| Clinical Scenario  |
 |----------------------|----------------|---------------|----------|----------------------------|
 |           |             | |                                                                            |                                                                                                                          |
 | Binnary Calssification    | Post-hoc                  | Model-Agonostic | LIME                                                                       | [Sleep apnea prediction](https://www.sciencedirect.com/science/article/pii/S1877050922012406) ,<br/>[Breast Cancer Metastasis prediction](https://doi.org/10.1109/TBME.2023.3282840)                                                 |
@@ -68,7 +68,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 ## Images
 ## Clinical Uses : XAI Application for CDSS Models with Medical Imaging Data Inputs
 
-| CDSS Output Category      | XAI Model Type            | Model Specifity | XAI model/s                                                                       | Clinical Scenario                                                                                                  |
+| CDSS Output Category      | XAI Model Type            | Model Specifity | XAI Mmodel                                                                       | Clinical Scenario                                                                                                  |
 |---------------------------|---------------------------|-----------------|-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
 | Binary classification     | Post-hoc                  | Model-specific  | Semantic-Powered Explainable Model-Free Few-Shot Learning Scheme *                | [Diagnose of COVID-19](https://doi.org/10.1109/jbhi.2022.3205167)                                                  |
 |                           |                           |                 | Confident-CAM                                                                     | [Improving Heat Map Interpretation in Chest X-Ray Classification](https://doi.org/10.1109/BIBM58861.2023.10386065) |
@@ -160,7 +160,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
         <td>Rule-based Systems </td>
     </tr>
     <tr>
-        <td>Araucana XAI</td>
+        <td><a href="https://github.com/bmi-labmedinfo/araucana-xai">Araucana XAI</a></td>
         <td>+</td>
         <td></td>
         <td></td>
@@ -216,7 +216,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Explanation by Linear Interactions </td>
     </tr>
     <tr>
-        <td>Explainable Fold</td>
+        <td><a href="https://eli5.readthedocs.io/en/latest/overview.html">Explainable Fold</a></td>
         <td></td>
         <td></td>
         <td>+</td>
