@@ -9,16 +9,21 @@ This Taxonomic Guide is designed to support CDSS developers in finding suitable 
 This repository was created as part of the PhD project of Dr. Lasantha Ranwaala, University of South Australia.
 
 To follow our taxonomy, user need to answer three basic questions about the CDSS they intended to generate explanations .
+```
 1.	What is the input data type of the CDSS?
 2.	What is the output type of the CDSS?
 3.	Does the CDSS require an explanation model that is inherently easy to understand from the start (White box), or can it be added after the model has undergone training (post-hoc)?
-
+```
 ![Taxonomic Guide](taxo.png)
 
+### Table of Contents
+1. [Clinical Uses: CDSS with Structured Data Inputs](#structured_data)
+2. [Clinicla Uses : CDSS with Imaging Data Inputs](#images)
+3. [Clinicla Uses : CDSS with Other Data Type Inputs](#images)
+4. [XAI Models : Structured Data inputs](#xai_1)
+5. [XAI Models : Medical imaging inputs](#xai_2)
+6. [XAI Models : MOther Data type inputs](#xai_3)
 
-### [Clinical Uses: CDSS with Structured Data Inputs](#structured_data)
-### [Clinicla Uses : CDSS with Imaging Data Inputs](#images)
-### [XAI Models Details](#xai_1)
 
 
 
@@ -102,32 +107,6 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 ## XAI_1
 ### XAI Models Details - CDSS with Structred Data Inputs
-| Model                                                                                             | Binnary Calssfication | Multiclass Classification | Funtional Output  | Built-in Interpretability | Post-hoc | Model-Agonostic | Model-specific | Explainable Methods                                                                                                                        |
-|---------------------------------------------------------------------------------------------------|-----------------------|---------------------------|-------------------|---------------------------|----------|-----------------|----------------|--------------------------------------------------------------------------------------------------------------------------------------------|
-| LIME                                                                                              | +                     |                           |                   |                           | +        | +               |                | Feature Importance, Feature Attribution                                                                                                    |
-| Modified LIME                                                                                     | +                     |                           |                   |                           | +        | +               |                | Feature Importance, Feature Attribution                                                                                                    |
-| SHAP                                                                                              | +                     | +                         | +                 |                           | +        | +               |                | Feature Importance, Feature Attribution                                                                                                    |
-| Qlattice                                                                                          | +                     |                           |                   |                           | +        | +               |                | Rule-based Systems                                                                                                                         |
-| Decision tree                                                                                     | +                     |                           |                   |                           | +        | +               |                | Rule-based Systems                                                                                                                         |
-| MVR-GA                                                                                            | +                     |                           |                   |                           | +        | +               |                | Rule Extraction                                                                                                                            |
-| Araucana XAI                                                                                      | +                     |                           |                   |                           | +        | +               |                | Rule-based Systems                                                                                                                         |
-| OVBLR-SFE                                                                                         | +                     |                           |                   | +                         |          |                 | +              | Salient Feature Estimation, Bayesian Logistic Regression                                                                                   |
-| ELIS5                                                                                             |                       | +                         |                   |                           | +        | +               |                | Explanation by Linear Interactions                                                                                                         |
-| AnEMIC                                                                                            |                       | +                         |                   |                           | +        | +               |                | Rule-based Systems                                                                                                                         |
-| VDJMiner                                                                                          |                       | +                         |                   |                           | +        |                 | +              | Rule-based Systems                                                                                                                         |
-| SurvSHAP(t)                                                                                       |                       |                           | +                 |                           | +        |                 | +              | Feature Importance, Survival Analysis                                                                                                      |
-| SurvLIME                                                                                          |                       |                           | +                 |                           | +        |                 | +              | Feature Importance, Survival Analysis                                                                                                      |
-| Ceteris Paribus Survival Profile                                                                  |                       |                           | +                 |                           | +        |                 | +              | Feature Importance, Survival Analysis                                                                                                      |
-| Explainable Fold                                                                                  |                       |                           | +                 |                           | +        | +               |                | Rule-based Systems                                                                                                                         |
-| Deep Explainer                                                                                    | +                     |                           |                   |                           | +        | +               |                | [feature importance and visualization techniques](https://<br/>github.com/niyazwani/DeepXplainer.git)                                      |
-| Anchors                                                                                           | +                     |                           |                   |                           | +        | +               |                | Rule-based Explanation                                                                                                                     |
-| Explainable Argumentation with Assumptions, Preferences, and Goals (ABA+G)                        |                       | +                         |                   | +                         |          |                 | +              | combination of Transition-based Medical Recommendation (TMR) Model and Explainable Argumentation with Assumptions, Preferences, and Goals  |
-| tropical geometry-based interpretable machine learning method applied to fuzzy inference systems. |                       | +                         |                   | +                         |          |                 | +              | Tropical Geometry, Decision Rule Extraction, Feature Importance Analysis:                                                                  |
-
-
-
-
-
 <table>
     <tr>
         <td>Model </td>
