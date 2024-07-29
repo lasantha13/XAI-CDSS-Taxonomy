@@ -149,7 +149,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
         <td>Rule-based Explanation </td>
     </tr>
     <tr>
-        <td>AnEMIC</td>
+        <td><a href="https://github.com/dalgu90/icd-coding-benchmark">AnEMIC</a></td>
         <td></td>
         <td>+</td>
         <td></td>
@@ -205,7 +205,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>feature importance and visualization techniques </td>
     </tr>
     <tr>
-        <td>ELIS5</td>
+        <td><a href="https://eli5.readthedocs.io/en/latest/overview.html">ELIS5</a></td>
         <td></td>
         <td>+</td>
         <td></td>
@@ -249,7 +249,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Feature Importance, Feature Attribution </td>
     </tr>
     <tr>
-        <td>MVR-GA</td>
+        <td><a href="https://github.com/MLDMXM2017/MVR-GA">MVR-GA</a></td>
         <td>+</td>
         <td></td>
         <td></td>
@@ -260,7 +260,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Rule Extraction </td>
     </tr>
     <tr>
-        <td>OVBLR-SFE</td>
+        <td><a href="https://github.com/xqw42/OVBLR-SFE">OVBLR-SFE</a></td>
         <td>+</td>
         <td></td>
         <td></td>
@@ -271,7 +271,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Salient Feature Estimation, Bayesian Logistic Regression </td>
     </tr>
     <tr>
-        <td>Qlattice</td>
+        <td><a href="https://docs.abzu.ai/docs/guides/getting_started/quick_start.html">Qlattice</a></td>
         <td>+</td>
         <td></td>
         <td></td>
@@ -282,7 +282,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Rule-based Systems </td>
     </tr>
     <tr>
-        <td>SHAP</td>
+        <td><a href="https://shap.readthedocs.io/en/latest/tabular_examples.html">SHAP</a></td>
         <td>+</td>
         <td>+</td>
         <td>+</td>
@@ -293,7 +293,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Feature Importance, Feature Attribution </td>
     </tr>
     <tr>
-        <td>SurvLIME</td>
+        <td><a href="https://github.com/imatge-upc/SurvLIMEpy">SurvLIME</a></td>
         <td></td>
         <td></td>
         <td>+</td>
@@ -304,7 +304,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Feature Importance, Survival Analysis </td>
     </tr>
     <tr>
-        <td>SurvSHAP(t)</td>
+        <td><a href="https://github.com/MI2DataLab/survshap">SurvSHAP(t)</a></td>
         <td></td>
         <td></td>
         <td>+</td>
