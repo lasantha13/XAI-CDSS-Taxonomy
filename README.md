@@ -22,6 +22,8 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 2. [XAI Models/Methods in CDSS with Imaging Data Inputs](#images)
 3. [XAI Models/Methods in CDSS with Other* Data Inputs](#images)
 
+*Molecular Structures (Chemical compounds, drug molecules), Protein Structures, Signals and Omics Data 
+
 #### B. XAI Method/Models Features
 4. [XAI Models : Structured Data Inputs](#xai_1)
 5. [XAI Models : Medical Imaging Inputs](#xai_2)
@@ -109,6 +111,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 ## Other Data types
 ## XAI Models/Methods in CDSS with Other* Data Inputs
+
 | CDSS Input Data type                                                           |  CDSS Output Category          | Model Type                | Model Specifity |         XAI Model/s                  |      Clinical Scenario                                                                                        |
 |---------------------------------------------------------------------------|---------------------------|---------------------------|-----------------|---------------------------|----------------------------------------------------------------------------------------------|
 | Molecular Structures (Chemical compounds, drug molecules)                 | Binnary Calssification    | Built-in Interpretability | Model-specific  | AttentiveSkin             | [Prediction of risk of skin irritation](https://pubs.acs.org/doi/full/10.1021/acs.chemrestox.3c00332)                                                  |
@@ -120,6 +123,8 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 |                                                                           |                           |                           |                 | MV-BRS                    | [Hepatotoxicity prediction](https://doi.org/10.1109/BIBM58861.2023.10385784)                                                              |
 |                                                                           | Multiclass Classification | Post-hoc                  | Model-specific  | VDJMiner                  | [Mine the underlying medical conditions and predict the prognosis of COVID-19](https://doi.org/10.1093/bib/bbac555)             |
 |                                                                           |                           |                           |                 | Gradiant based approached | [Predicting Antimicrobial Resistance (AMR) from genomic sequence data](https://doi.org/10.1109/ACCESS.2022.3216896)                    |
+
+*Molecular Structures (Chemical compounds, drug molecules), Protein Structures, Signals and Omics Data 
 
 ## XAI_1
 ### XAI Models Details - CDSS with Structred Data Inputs
@@ -339,13 +344,9 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
 <table>
     <tr>
         <td>Model </td>
-        <td>Output Type</td>
-        <td></td>
-        <td></td>
-        <td>XAI moderl development</td>
-        <td></td>
-        <td>XAI Model speciity</td>
-        <td></td>
+        <td colspan="3">Output Type</td>
+        <td colspan="2">Timing of interpretability</td>
+        <td colspan="2">XAI Model speciity</td>
         <td>Explainable Methods  </td>
     </tr>
     <tr>
@@ -638,12 +639,21 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
     </tr>
 </table>
 
-### xx3
+## XAI_3
+### XAI Models Details - CDSS with Other* Data Inputs
 
 <table>
     <tr>
-        <td>Model</td>
+        <td>Model </td>
         <td>Input Data type</td>
+        <td colspan="3">Output Type</td>
+        <td colspan="2">Timing of interpretability</td>
+        <td colspan="2">XAI Model speciity</td>
+        <td>Explainable Methods  </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
         <td>Bi</td>
         <td>Multi</td>
         <td>Fun </td>
@@ -717,3 +727,4 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
    
   
 </table>
+*Molecular Structures (Chemical compounds, drug molecules), Protein Structures, Signals and Omics Data 
