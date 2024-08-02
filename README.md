@@ -17,12 +17,12 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 
 ### Table of Contents
-#### A. XAI Methods/Model with Assosiated Clinical Scenarios
-1. [Clinical Use Cases: CDSS with Structured Data Inputs](#structured_data)
-2. [Clinicla Use Cases : CDSS with Imaging Data Inputs](#images)
-3. [Clinicla Use Cases : CDSS with Other Data Type Inputs](#images)
+#### A. Classification of XAI Models/Methods in CDSS Based on Input Data Types with Clinical Application Examples
+1. [XAI Models/Methods in CDSS with Structured Data Inputs](#structured_data)
+2. [XAI Models/Methods in CDSS with Imaging Data Inputs](#images)
+3. [XAI Models/Methods in CDSS with Other* Data Inputs](#images)
 
-#### B. XAI Method/Model Features 
+#### B. XAI Method/Models Features
 4. [XAI Models : Structured Data Inputs](#xai_1)
 5. [XAI Models : Medical Imaging Inputs](#xai_2)
 6. [XAI Models : Other Data type Inputs](#xai_3)
