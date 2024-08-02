@@ -31,7 +31,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 
 ## Structured_Data
-## Clinical Uses : XAI Application for CDSS Models with Structured Data Inputs
+## XAI Models/Methods in CDSS with Structured Data Inputs
 | CDSS Output Category | XAI Model Type | Model Specificity  | XAI Model| Clinical Scenario  |
 |----------------------|----------------|---------------|----------|----------------------------|
 |           |             | |                                                                            |                                                                                                                          |
@@ -70,7 +70,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 
 ## Images
-## Clinical Uses : XAI Application for CDSS Models with Medical Imaging Data Inputs
+## XAI Models/Methods in CDSS with Imaging Data Inputs
 
 | CDSS Output Category      | XAI Model Type            | Model Specifity | XAI Mmodel                                                                       | Clinical Scenario                                                                                                  |
 |---------------------------|---------------------------|-----------------|-----------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------|
@@ -108,7 +108,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 |          |        Hybrid(Built-in Interpretability + Post Hoc)                   | Model-specific + Model Agnosti  | scifAI                                                                            | [Immunological synapse and functional characterization of therapeutic antibodies](https://www.nature.com/articles/s41467-023-43429-2)                              |
 
 ## Other Data types
-## Clinical Uses : XAI Application for CDSS Models with Other* Data Inputs
+## XAI Models/Methods in CDSS with Other* Data Inputs
 | CDSS Input Data type                                                           |  CDSS Output Category          | Model Type                | Model Specifity |         XAI Model/s                  |      Clinical Scenario                                                                                        |
 |---------------------------------------------------------------------------|---------------------------|---------------------------|-----------------|---------------------------|----------------------------------------------------------------------------------------------|
 | Molecular Structures (Chemical compounds, drug molecules)                 | Binnary Calssification    | Built-in Interpretability | Model-specific  | AttentiveSkin             | [Prediction of risk of skin irritation](https://pubs.acs.org/doi/full/10.1021/acs.chemrestox.3c00332)                                                  |
