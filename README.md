@@ -50,12 +50,12 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 |                           |                           |                 | SHAP,LIME,ELI5,Qlattice                                                    | [Detection of Polycystic Ovary Syndrome](https://doi.org/10.3390/asi6020032)                                                                              |
 |                           |                           |                 |                                                     | [Gestational diabetes mellitus prediction using clinical and laboratory markers](https://doi.org/10.1080/23311916.20242330266)                                                                              |
 |                           |                           |                 |                                                     | Osteoporosis risk prediction 170                                                                              |
-|                           |                           |                 | SHAP,Rule based system                                      | [Intensive care unit mortality prediction of neonate patients](https://doi.org/10.1016/j.jbi.2022.104216)                                                        |
 |                           |                           |                 | DeepExplainer                                                              | [Lung Cancer Detection](https://doi.org/10.1016/j.cmpb.2023.107879)                                                                                               |
 |                           |                           |                 | MVR-GA                                                                     | [Accurate hepatotoxicity prediction](https://doi.org/10.1109/BIBM55620.2022.9995667)                                                                                  |
 |                           |                           |                 | Araucana XAI                                                               | [Prediction of hospitalization outcome of patients with liver dieases. & Prediction of death in ICU patients](https://doi.org/10.1016/j.artmed.2022.102471)        |
 |                           |                           |                 | DeepExplainer                                                               | Lung Cancer Detection -148        |
 |                           | Built-in Interpretability | Model-specific  | OVBLR-SFE                                                                  | [An intensive care unit readmission prediction case for liver transplantation patients](https://doi.org/10.1016/j.eswa.2023.121138)                                |
+|                           |                           |                 | Decision Tree,Rule based system                                      | [Intensive care unit mortality prediction of neonate patients](https://doi.org/10.1016/j.jbi.2022.104216)                                                        |
 |                           |  |  | GSInquire                                                                  | kidney injury of COVID-19 patients -198                                |
 |                           | |   | Tropical Geometry-Based Interpretable ML Method                                                                  | Identifying heart failure patients that are eligible for advanced therapies -274                                |
 |                           |                           |                 |                                                                            |                                                                                                                          |
@@ -156,7 +156,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
         <td></td>
         <td></td>
         <td>+</td>
-        <td>combination of Transition-based Medical Recommendation (TMR) Model and Explainable Argumentation with Assumptions, Preferences, and Goals  </td>
+        <td>Combination of Transition-based Medical Recommendation (TMR) Model and Explainable Argumentation with Assumptions, Preferences, and Goals  </td>
     </tr>
     <tr>
         <td>Anchors</td>
@@ -178,7 +178,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
         <td>+</td>
         <td>+</td>
         <td></td>
-        <td>Rule-based Systems </td>
+        <td>Integrated Gradients and attention scores </td>
     </tr>
     <tr>
         <td><a href="https://github.com/bmi-labmedinfo/araucana-xai">Araucana XAI</a></td>
@@ -189,7 +189,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
         <td>+</td>
         <td>+</td>
         <td></td>
-        <td>Rule-based Systems </td>
+        <td>Uses a decision tree structure for interpretability. </td>
     </tr>
     <tr>
         <td>Ceteris Paribus Survival Profile</td>
@@ -361,7 +361,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Explainable Methods  </td>
     </tr>
     <tr>
-        <td>Confident-CAM: </td>
+        <td><a href="https://github.com/JoanaNRocha/Confident-CAM">Confident-CAM</a> </td>
         <td>+</td>
         <td></td>
         <td></td>
@@ -372,7 +372,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Heatmaps, Feature Importance </td>
     </tr>
     <tr>
-        <td>CT-xCOV</td>
+        <td><a href="https://github.com/ismailelbouknify/CT-xCOV">CT-xCOV</a></td>
         <td>+</td>
         <td></td>
         <td></td>
@@ -383,7 +383,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Textual justification; Visualisation </td>
     </tr>
     <tr>
-        <td>EGAE</td>
+        <td><a href="https://github.com/KhaosResearch/EGAE">EGAE</a></td>
         <td></td>
         <td>+</td>
         <td></td>
@@ -418,7 +418,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>image Classfication </td>
     </tr>
     <tr>
-        <td>Explainable Contrastive and Cost-Sensitive Learning for Cervical Cancer</td>
+        <td><a href=" https://github.com/isha-67/CervicalCancerStudy">Explainable Contrastive and Cost-Sensitive Learning for Cervical Cancer</a></td>
         <td>+</td>
         <td></td>
         <td></td>
@@ -429,7 +429,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Contrastive Learning, Cost-Sensitive Learning, Visualization </td>
     </tr>
     <tr>
-        <td>ExPN-Net</td>
+        <td><a href="https://github.com/KumoLiu/explainablePN">ExPN-Net</a></td>
         <td>+</td>
         <td></td>
         <td></td>
@@ -440,7 +440,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Visualization, Feature Importance, Heatmaps </td>
     </tr>
     <tr>
-        <td>Hybrid Swin Deformable Attention U-Net -SDAH-Unet</td>
+        <td><a href="https : //github.com/wlc2424762917/SDAH UNet">Hybrid Swin Deformable Attention U-Net -SDAH-Unet</a></td>
         <td>+</td>
         <td>+</td>
         <td></td>
@@ -451,7 +451,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Attention Maps, Feature Visual </td>
     </tr>
     <tr>
-        <td>I-AI</td>
+        <td><a href="https://github.com/UARK-AICV/IAI">I-AI</a></td>
         <td></td>
         <td>+</td>
         <td></td>
@@ -462,7 +462,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Attention Maps, Heatmaps, Feature Importance </td>
     </tr>
     <tr>
-        <td>IMFSegNet</td>
+        <td><a href="https://github.com/applied-systems-biology/sheepfat">IMFSegNet</a></td>
         <td></td>
         <td>+</td>
         <td></td>
@@ -473,7 +473,9 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Image Segmentation </td>
     </tr>
     <tr>
-        <td>Interpretable Deep Learning for Skin Cancer Categorization</td>
+        <td><a href="https://github.com/Faysal-MD/An-Interpretable-Deep-Learning-
+Approach-for-Skin-Cancer-Categorization-IEEE2023
+">Interpretable DL for Skin Cancer Categorization</a></td>
         <td>+</td>
         <td>+</td>
         <td></td>
@@ -484,7 +486,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Feature Importance, Heatmaps, Visualization </td>
     </tr>
     <tr>
-        <td>Intrinsically explainable DL for heart tissue segmentation</td>
+        <td><a href="https://github.com/mathali/IEDL-segmentation-of-heart-tissue">Intrinsically explainable DL for heart tissue segmentation</a></td>
         <td></td>
         <td>+</td>
         <td></td>
