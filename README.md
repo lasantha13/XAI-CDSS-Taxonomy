@@ -49,11 +49,10 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 |                           |                           |                 |                                                                            | [Parkinsonâ€™s Speech  Detection](https://doi.org/10.1109/ICCAR61844.2024.10569414)                                                                                    |
 |                           |                           |                 | SHAP,LIME,ELI5,Qlattice                                                    | [Detection of Polycystic Ovary Syndrome](https://doi.org/10.3390/asi6020032)                                                                              |
 |                           |                           |                 |                                                     | [Gestational diabetes mellitus prediction using clinical and laboratory markers](https://doi.org/10.1080/23311916.20242330266)                                                                              |
-|                           |                           |                 |                                                     | Osteoporosis risk prediction 170                                                                              |
+|                           |                           |                 |                                                     | [Osteoporosis risk prediction](https://doi.org/10.1016/j.heliyon.2023.e22456)                                                                              |
 |                           |                           |                 | DeepExplainer                                                              | [Lung Cancer Detection](https://doi.org/10.1016/j.cmpb.2023.107879)                                                                                               |
 |                           |                           |                 | MVR-GA                                                                     | [Accurate hepatotoxicity prediction](https://doi.org/10.1109/BIBM55620.2022.9995667)                                                                                  |
 |                           |                           |                 | Araucana XAI                                                               | [Prediction of hospitalization outcome of patients with liver dieases. & Prediction of death in ICU patients](https://doi.org/10.1016/j.artmed.2022.102471)        |
-|                           |                           |                 | DeepExplainer                                                               | Lung Cancer Detection -148        |
 |                           | Built-in Interpretability | Model-specific  | OVBLR-SFE                                                                  | [An intensive care unit readmission prediction case for liver transplantation patients](https://doi.org/10.1016/j.eswa.2023.121138)                                |
 |                           |                           |                 | Decision Tree,Rule based system                                      | [Intensive care unit mortality prediction of neonate patients](https://doi.org/10.1016/j.jbi.2022.104216)                                                        |
 |                           |  |  | GSInquire                                                                  | kidney injury of COVID-19 patients -198                                |
@@ -440,7 +439,7 @@ github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
         <td>Visualization, Feature Importance, Heatmaps </td>
     </tr>
     <tr>
-        <td><a href="https : //github.com/wlc2424762917/SDAH UNet">Hybrid Swin Deformable Attention U-Net -SDAH-Unet</a></td>
+        <td><a href="https://github.com/wlc2424762917/SDAH UNet">SDAH-Unet</a></td>
         <td>+</td>
         <td>+</td>
         <td></td>
