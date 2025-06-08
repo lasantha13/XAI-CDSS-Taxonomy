@@ -15,16 +15,15 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 3.	Does the CDSS require an inherently understandable model to generate explanations, or can explanations be added after the model is built?
 ```
 
-
-### Table of Contents
+## Table_of_contents
 #### A. Classification of XAI Models/Methods in CDSS Based on Input Data Types with Clinical Application Examples
-1. [XAI Models/Methods in CDSS with Structured Data Inputs](#structured_data)
-2. [XAI Models/Methods in CDSS with Imaging Data Inputs](#images)
-3. [XAI Models/Methods in CDSS with Other* Data Inputs](#images)
+1. [XAI Techniques in CDSS with Structured Data Inputs](#structured_data)
+2. [XAI Techniques in CDSS with Imaging Data Inputs](#images)
+3. [XAI Techniques in CDSS with Other* Data Inputs](#other_data)
 
-*Molecular Structures (Chemical compounds, drug molecules), Protein Structures, Signals and Omics Data 
 
-#### B. XAI Method/Models Features
+
+#### B. XAI Techniques and their features Used in CDSS
 4. [XAI Models : Structured Data Inputs](#xai_1)
 5. [XAI Models : Medical Imaging Inputs](#xai_2)
 6. [XAI Models : Other Data type Inputs](#xai_3)
@@ -33,701 +32,351 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 
 ## Structured_Data
+### XAI Techniques in CDSS with Structured Data Inputs                  
+[Back](#table_of_contents)
+
+| CDSS Output                | Model Dependency | XAI Approach              | Scope          | XAI Technique                                                                                     | Clinical Scenario                                                                                                                        |
+|----------------------------|------------------|---------------------------|----------------|---------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|
+| Binary Classification      | Model-Agnostic   | Post-hoc                  | Global/ Local  | SHAP                                                                                              | -Predict acute kidney injury after cardiac surgery (Shao et al., 2023)                                                                   |
+|                            |                  |                           |                |                                                                                                   | -Predict cervical cancer using behavioural risk factors (Ali et al., 2024)                                                               |
+|                            |                  |                           |                |                                                                                                   | - Predicting the conversion of clinically isolated syndrome (CIS) to clinically definite multiple sclerosis (CDMS)(Rasouli et al., 2024) |
+|                            |                  |                           |                |                                                                                                   | - Predict 1-year survival after palliative radiotherapy (RT) (Cilla et al., 2024)                                                        |
+|                            |                  |                           |                |                                                                                                   | -Breast cancer detection(Maheswari et al., 2024)                                                                                         |
+|                            |                  |                           |                |                                                                                                   | Real-time deterioration alert prediction (Brankovic et al., 2022)                                                                        |
+|                            |                  |                           |                |                                                                                                   | predict paediatric ICU mortality risk(Barda et al., 2020)                                                                                |
+|                            |                  |                           |                |                                                                                                   | Live disease diagnosis (Dalvi et al., 2024)                                                                                              |
+|                            |                  |                           |                |                                                                                                   | prediction of diabetes (S. Y. Lee et al., 2024)                                                                                          |
+|                            |                  |                           |                |                                                                                                   | Predict heart disease  (Mesquita & Marques, 2024)                                                                                        |
+|                            |                  |                           |                |                                                                                                   | Predict intubation in ICU (J. Liu et al., 2024)                                                                                          |
+|                            |                  |                           |                |                                                                                                   | Predict septic                                                                                                                           |
+|                            |                  |                           |                |                                                                                                   | patients’ mortality (Park et al., 2024)                                                                                                  |
+|                            |                  |                           |                |                                                                                                   | Triage management (Loftus et al., 2023)                                                                                                  |
+|                            |                  |                           |                |                                                                                                   | Predict preterm birth (Kyparissidis-Kokkinidis et al., 2024)                                                                             |
+|                            |                  |                           |                |                                                                                                   | Predict thyroid Cancer  (Sankar & Sathyalakshmi, 2024)                                                                                   |
+|                            |                  |                           |                |                                                                                                   | Predict thyroid disease (Arjaria et al., 2022)                                                                                           |
+|                            |                  |                           |                |                                                                                                   | Predict  hospital mortality (Stenwig et al., 2022)                                                                                       |
+|                            |                  |                           |                |                                                                                                   | Differentiation of intestinal                                                                                                            |
+|                            |                  |                           |                |                                                                                                   | tuberculosis and Crohn's disease (Weng et al., 2022)                                                                                     |
+|                            |                  |                           |                |                                                                                                   | Support radiation therapy plan (Siciarz et al., 2021)                                                                                    |
+|                            |                  |                           |                |                                                                                                   | Temporomandibular Joint Involvement in Juvenile idiopathic arthritis (Christensen et al., 2024)                                          |
+|                            |                  |                           |                |                                                                                                   | predict morbidity & mortality in acute neurological injury (Munjal et al., 2023)                                                         |
+|                            |                  |                           |                | SHAP & LIME                                                                                       | -prediction of diabetes(Ganguly & Singh, 2023; Tasin et al., 2023)                                                                       |
+|                            |                  |                           |                |                                                                                                   | -C-Section prediction(Islam et al., 2022)                                                                                                |
+|                            |                  |                           |                |                                                                                                   | Predict  autonomous disease  (Rao et al., 2022)                                                                                          |
+|                            |                  |                           |                |                                                                                                   | Predict  miscarriage in pregnancy (Javed et al., 2024)                                                                                   |
+|                            |                  |                           |                | SHAP, LIME, ELI5, Qlattice,                                                                       | -Detection of Polycystic Ovary Syndrome (V. Khanna et al., 2023)                                                                         |
+|                            |                  |                           |                |                                                                                                   | -Osteoporosis risk prediction(V. V. Khanna et al., 2023)                                                                                 |
+|                            |                  |                           |                |                                                                                                   | - Gestational diabetes mellitus prediction using clinical and laboratory markers(Vivek Khanna et al., 2024)                              |
+|                            |                  |                           |                |                                                                                                   | Predict social anxiety disorder (Chadaga et al., 2024)                                                                                   |
+|                            |                  |                           |                |                                                                                                   | Diagnosis of COVID-19 from Non-COVID-19 Influenza-like Illness (Chadaga et al., 2023)                                                    |
+|                            |                  |                           |                | GSInquire                                                                                         | Predicting survival and kidney injury of COVID-19 patients (Aboutalebi et al., 2022)                                                     |
+|                            |                  |                           | Local          | LIME                                                                                              | -Sleep apnoea prediction (Troncoso-García et al., 2022)                                                                                  |
+|                            |                  |                           |                |                                                                                                   | -Breast Cancer Metastasis prediction (Maouche et al., 2023)                                                                              |
+|                            |                  |                           |                |                                                                                                   | -COVID-19 prediction (Solayman et al., 2023)                                                                                             |
+|                            |                  |                           |                |                                                                                                   | Arrhythmia classification (Nithya & Rani, 2023)                                                                                          |
+|                            |                  |                           |                |                                                                                                   | Predict  fasting blood glucose (Curia, 2023)                                                                                             |
+|                            |                  |                           |                |                                                                                                   | Predict hospital readmission (Magboo & Magboo, 2022)                                                                                     |
+|                            |                  |                           |                |                                                                                                   | Predict neonatal diabetes mellitus (Garg & Kaur, 2023)                                                                                   |
+|                            |                  |                           |                | Araucana XAI                                                                                      | Prediction of hospitalization outcome of patients with liver diseases  & prediction of death in ICU patients (Parimbelli et al., 2023)   |
+|                            |                  |                           |                | Anchors                                                                                           | Gestational diabetes mellitus prediction(Vivek Khanna et al., 2024)                                                                      |
+|                            | Model-specific   | Post-hoc                  | Global/ Local  | Deep Explainer                                                                                    | Lung Cancer Detection(Wani et al., 2024)                                                                                                 |
+|                            |                  |                           |                | DeepSHAP                                                                                          | Predict Non-Communicable                                                                                                                 |
+|                            |                  |                           |                |                                                                                                   | Diseases (Davagdorj et al., 2021)                                                                                                        |
+|                            |                  |                           | Global         | MVR-GA                                                                                            | Accurate hepatotoxicity prediction(Zhong et al., 2022)                                                                                   |
+|                            |                  | Built-in Interpretability | Global/ Local  | OVBLR-SFE                                                                                         | An intensive care unit readmission prediction case for liver transplantation patients(Jinping Liu et al., 2024)                          |
+|                            |                  |                           |                | XAHN                                                                                              | Preeclampsia Diagnosis (Ponce et al., 2024)                                                                                              |
+|                            |                  |                           |                | EBM                                                                                               | Predict mental health ED admission (Higgins et al., 2024)                                                                                |
+|                            |                  |                           | Global         | Tropical Geometry-Based Interpretable ML Method                                                   | Identifying heart failure patients that are eligible for advanced therapies(Yao et al., 2022)                                            |
+|                            |                  |                           |                | MV-BRS                                                                                            | Hepatotoxicity prediction (Chen et al., 2023)                                                                                            |
+|                            |                  |                           | Local          | interpretable Fuzzy System                                                                        | Predict dementia (Chen et al., 2022)                                                                                                     |
+|                            |                  |                           |                | analysing neural network weights, nearest neighbours, or the frequency of similar training cases  | Predict diabetes (Ahmad & Mehfuz, 2022)                                                                                                  |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+|                            |                  |                           |                | CBR                                                                                               | Predict breast cancer (Lamy et al., 2019)                                                                                                |
+|                            |                  |                           |                | SHAP & Decision tree                                                                              | Predict diabetes (Ahuja & Indra, 2024)                                                                                                   |
+| Multiclass Classification  | Model-Agnostic   | Post-hoc                  | Global/ Local  | ELIS5                                                                                             | Brain tumour classification (Nair et al., 2023)                                                                                          |
+|                            |                  |                           |                | SHAP                                                                                              | Predict the risk factors related to the direct association between obesity and comorbidities(Aiosa et al., 2023)                         |
+|                            |                  |                           |                |                                                                                                   | Obesity estimation (Mahadi et al., 2024)                                                                                                 |
+|                            |                  |                           |                |                                                                                                   | Scaling-up antibiotic stewardship (Tran-The et al., 2024)                                                                                |
+|                            |                  |                           |                |                                                                                                   | Predict quality of life in ALS (Antoniadi et al., 2022)                                                                                  |
+|                            |                  |                           |                |                                                                                                   | Classification of anaemia (Prajapati et al., 2023)                                                                                       |
+|                            |                  |                           |                | SHAP & LIME                                                                                       | Predicting fetal abnormalities based on  cardiotocography readings(Wilson et al., 2023)                                                  |
+|                            |                  |                           |                |                                                                                                   | Healthy ageing scale (Gašperlin Stepančič et al., 2024)                                                                                  |
+|                            |                  |                           |                | AnEMIC                                                                                            | A framework for benchmarking ICD coding models(Kim et al., 2022)                                                                         |
+|                            |                  |                           | Local          | LIME                                                                                              | Predict cardiovascular disease risk(Erdeniz et al., 2023)                                                                                |
+|                            |                  |                           |                |                                                                                                   | Classification of  Schizophrenia (Somasundaram et al., 2024)                                                                             |
+|                            |                  |                           |                | Counterfactual                                                                                    | Chronic disease Prevention (Lenatti et al., 2024)                                                                                        |
+|                            |                  |                           |                |                                                                                                   | Diagnosis  transient loss of consciousness (Liedeker & Cimiano, 2023)                                                                    |
+|                            |                  |                           |                | LIME SHAP PDP                                                                                     | Predict Genitourinary cancer (Muhammad & Bendechache, 2024)                                                                              |
+|                            |                  |                           |                | Shap Lime shapash                                                                                 | Early detection of Parkinsonâ€™s disease (Junaid et al., 2023)                                                                           |
+|                            |                  |                           |                | PDP, SHAP, ICE, LIME                                                                              | Interpretable Clinical Decision (M. Wang et al., 2024)                                                                                   |
+|                            |                  |                           | Global         | BoCSoR measure                                                                                    | Mental state classification (Alfeo et al., 2023)                                                                                         |
+|                            | Model Specific   | Built-in Interpretability | Global/ Local  | ABA+G                                                                                             | Managing co-morbidity and clinical guidelines (Domínguez et al., 2024)                                                                   |
+|                            |                  |                           |                | Attentive Skin                                                                                    | Prediction of risk of skin irritation (Z. Huang et al., 2024)                                                                            |
+|                            |                  |                           |                | SHAP+MDI                                                                                          | Predict risk factors for COVID-19 disease severity (Datta et al., 2024)                                                                  |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+| Multi-label Classification | Model-Specific   | Built-in Interpretability | Local          | GT Model                                                                                          | Underlying Cause of Death classification (Popescu et al., 2022)                                                                          |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+| Risk stratification        | Model-Agnostic   | Post-hoc                  | Local/Global   | SHAP                                                                                              | Predict rehospitalization risk                                                                                                           |
+|                            |                  |                           |                |                                                                                                   | (Confortola et al., 2024)                                                                                                                |
+|                            |                  |                           |                |                                                                                                   | Predict Pain response (Areias et al., 2024)378                                                                                           |
+|                            |                  |                           |                |                                                                                                   | predict the risk of buprenorphine treatment discontinuation (Al Faysal et al., 2024)                                                     |
+|                            |                  |                           |                |                                                                                                   | Predict mortality risk (Zhuang et al., 2024)                                                                                             |
+|                            |                  |                           |                |                                                                                                   | Breast Cancer prediction (Silva-Aravena et al., 2023)                                                                                    |
+|                            |                  |                           | Local          | LIME                                                                                              | Predict  adverse cardiovascular events (Erdeniz et al., 2022)                                                                            |
+|                            |                  |                           |                |                                                                                                   | Stroke Risk Prediction(Ugbomeh et al., 2024)                                                                                             |
+|                            | Model-Specific   | Built-in Interpretability | Local          | Patient Similarity Analytics                                                                      | Clinical risk prediction (Fang et al., 2021)                                                                                             |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+|                            |                  | Post-hoc                  | Local          | Visual Explanation using Interactive Rainbow Boxes                                                | Treatment Recommendation (Lamy & Tsopra, 2019)                                                                                           |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+|                            |                  | Built-in Interpretability | Local          | Fuzzy logic-based XAI                                                                             | Asses nutritional related geriatric syndromes (Petrauskas et al., 2021)                                                                  |
+| Regression                 | Model-Agnostic   | Post-hoc                  | Local/Global   | SHAP                                                                                              | Predict risks to psychotherapy (Westbye et al., 2024)                                                                                    |
+|                            |                  |                           |                |                                                                                                   | Rapid risk stratification (van Doorn et al., 2024)                                                                                       |
+|                            |                  |                           |                |                                                                                                   | predict blood glucose levels (Annuzzi et al., 2023)                                                                                      |
+|                            |                  |                           |                |                                                                                                   | Predict decompensation risk in ICU patients (Aikodon et al., 2024)                                                                       |
+|                            |                  |                           | Local          | LIME                                                                                              | predict cancer drug value (Kothari et al., 2024)                                                                                         |
+|                            |                  |                           |                |                                                                                                   | Predict  Insulin dosage (Gaddeti et al., 2024)                                                                                           |
+| Clustering                 | Model-Agnostic   | Post-hoc                  | Local          | SHAP LIME ICE                                                                                     | Cytokines analysis of dry eye (Curia, 2021)                                                                                              |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+| phenotyping                | Model-Specific   | Built-in Interpretability | Local          | Decision tree with Feature Selection methods (χ2, Binomial, IG, Gini, DKM)                        | Disease phenotyping  (Fernández-Gutiérrez et al., 2021)                                                                                  |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+| Recommendations            | Model-Specific   | Built-in Interpretability | Local          | fuzzy logic                                                                                       | Rehabilitation routine adjustment support  (Martínez et al., 2023)                                                                       |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+|                            |                  |                           |                | EXPLAIN                                                                                           | Recommendation for long-term behaviour change (Woensel et al., 2022)                                                                     |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+| Priority Ranking           | Model-Agnostic   | Post-hoc                  | Local          | Counterfactual explanations                                                                       | Rank ICU admissions risk (Salimiparasa et al., 2024)                                                                                     |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+|                            | Model-Specific   | Post-hoc                  | Local          | Bayesian Network–Driven Context-Aware XAI with Counterfactual and Relevance-Based Justification   | Reasoning support to diagnosis (Battefeld et al., 2024)                                                                                  |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+| Survival analysis          | Model-Agnostic   | Post-hoc                  | Global/ Local  | SurvSHAP(t)                                                                                       | Time-dependent explanations of machine learning survival models(Krzyziński et al., 2023)                                                 |
+|                            |                  |                           |                | SurvSHAP(t),  SurvLIME,                                                                           | Survival in Bone Marrow Transplantation Trials(Passera et al., 2023)                                                                     |
+|                            |                  |                           |                |                                                                                                   |                                                                                                                                          |
+
+## Images 
+### XAI Techniques in CDSS with Imaging Data Inputs
+[Back](#table_of_contents)
+| CDSS Output               | Model Dependency | XAI Approach               | Scope         | XAI Technique                                                    | Clinical Scenario                                                                                               |
+|---------------------------|------------------|----------------------------|---------------|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
+| Binary classification     | Model agnostic   | Post-hoc                   | Local         | LIME                                                             | Diabetic retinopathy detection (Posham & Bhattacharya, 2024)                                                    |
+|                           |                  |                            |               |                                                                  | Malaria detection (Meske & Bunde, 2020)                                                                         |
+|                           |                  |                            |               | CovNNet                                                          | Predict Covid 19(Ieracitano et al., 2022)                                                                       |
+|                           |                  |                            | Global/ Local | SHAP                                                             | chronic wound management  support (Mombini et al., 2021)                                                        |
+|                           |                  |                            |               |                                                                  | Predict renal cell carcinoma (Han et al., 2021)                                                                 |
+|                           | Model specific   | Post-hoc                   | Local         | Confident-CAM                                                    | Improving heat map interpretation in chest X-ray classification (Rocha et al., 2023)                            |
+|                           |                  |                            |               | Eigen Visualization                                              | Automated detection of colorectal polyp (Ahamed et al., 2024)                                                   |
+|                           |                  |                            |               | CT-xCOV                                                          | Covid-19 diagnosis using CT scans (Elbouknify et al., 2023)                                                     |
+|                           |                  |                            |               |  EBXAI                                                           | Vertebral Fracture Detection (Famiglini et al., 2024)                                                           |
+|                           |                  |                            |               | Grad-CAM                                                         | Predict brain tumour (Jayapradha et al., 2024)                                                                  |
+|                           |                  |                            |               |                                                                  | Cataract Detection (Olaniyan et al., 2024; Shah et al., 2023)                                                   |
+|                           |                  |                            |               |                                                                  | Predict Pneumonia (Major et al., 2020)                                                                          |
+|                           |                  | Built-in interpretability  | Local         | ExPN-Net                                                         | Pulmonary nodule diagnosis (C. Wang et al., 2024)                                                               |
+|                           |                  |                            |               | MProtoNet                                                        | Brain tumour classification using MRI (Wei et al., 2024)                                                        |
+|                           |                  |                            |               | Explainer framework                                              | Predict Thyroid cancer (Song et al., 2023)                                                                      |
+|                           |                  |                            |               |                                                                  |                                                                                                                 |
+|                           |                  |                            |               | Multimodal explainability                                        | Predict breast cancer (Lee et al., 2019)                                                                        |
+|                           |                  |                            | Global/ Local | I-AI                                                             | Diagnosis support for X-Ray (Pham et al., 2024)                                                                 |
+|                           |                  |                            |               | NeuroIGN                                                         | Image-guided brain tumour surgery (Zeineldin et al., 2024)                                                      |
+|                           |                  |                            |               | Semantic-Powered Explainable Model-Free Few-Shot Learning Scheme | Diagnose of COVID-19 (Wang et al., 2022)                                                                        |
+| Multiclass classification | Model agnostic   | Post-hoc                   | Global        | Ensemble XAI                                                     | Prediction of the mortality risk of community-acquired pneumonia and COVID-19 (Zou et al., 2023)                |
+|                           |                  |                            |               | EGAE                                                             | Detection of melanoma (Nematzadeh et al., 2023)                                                                 |
+|                           |                  |                            | Local         | ExAID framework                                                  | Predict skin lesions (Lucieri et al., 2022)                                                                     |
+|                           |                  |                            |               | CIU, SHAP and LIME                                               | gastral red lesions detection (Knapič et al., 2021)                                                             |
+|                           |                  |                            |               | modified Lime                                                    | Predict skin lesions (Stieler et al., 2021)                                                                     |
+|                           |                  |                            |               |                                                                  | Predict Lung Nodules  (Koyyada & Singh, 2023)                                                                   |
+|                           |                  |                            | Global/ Local | SHAP                                                             | Diagnosis of  Acute Lymphoblastic Leukemia(Aziz et al., 2024)                                                   |
+|                           |                  |                            |               |                                                                  | Exploring brain tumour segmentation and patient survival (Ponzi & De Magistris, 2023)                           |
+|                           |                  |                            |               |                                                                  | -predict the severity level of Alzheimer's disease using MRI images (Yilmaz, 2023)                              |
+|                           |                  |                            |               |                                                                  | - Detecting contrast phase in abdominal CT scan(Reis et al., 2024)                                              |
+|                           |                  |                            |               | MiMICRI                                                          | Cardiovascular image classification (Guo et al., 2024)                                                          |
+|                           |                  |                            |               | scifAI                                                           | Immunological synapse and functional characterization of therapeutic antibodies (Shetab Boushehri et al., 2023) |
+|                           | Model specific   | Post-hoc                   | Local         | NeuroXAI                                                         | Prediction of brain tumours (Zeineldin et al., 2022)                                                            |
+|                           |                  |                            |               | ResNet-152 combined with Grad–CAM                                | Endoscopic image classification (Mukhtorov et al., 2023)                                                        |
+|                           |                  |                            |               | X-mir                                                            | Explainable image retrieval (Hu et al., 2022)                                                                   |
+|                           |                  |                            |               | Grad- CAM                                                        | Exploring brain tumour Segmentation and patient survival (Ponzi & De Magistris, 2023),373                       |
+|                           |                  |                            |               |                                                                  | Diagnosis of  Acute Lymphoblastic Leukemia(Aziz et al., 2024)                                                   |
+|                           |                  |                            |               |                                                                  | Predict Gastrointestinal disease from endoscopy (Enes Oğuz & Alkan, 2024)                                       |
+|                           |                  |                            |               |                                                                  | Support problems related to the interpretation of Point-of-Care Ultrasound (Ignesti et al., 2023)               |
+|                           |                  |                            |               | Layer_CAM                                                        | Cervical Cancer Classification (Mustari et al., 2023)                                                           |
+|                           |                  |                            |               | IMFSegNet                                                        | Quantification of intramuscular fat in histological sections (Praetorius et al., 2023)                          |
+|                           |                  |                            |               | SmoothGrad                                                       | Skin cancer categorisation (Mahmud et al., 2023)                                                                |
+|                           |                  |                            |               | Faster Score-CAM                                                 |                                                                                                                 |
+|                           |                  |                            |               | Neuro-XAI                                                        | Brain Tumor Classification (Saeed et al., 2024)                                                                 |
+|                           |                  |                            |               | CAM                                                              | Cystic fibrosis assessment (Ringwald et al., 2024)                                                              |
+|                           |                  |                            |               | Grad-CAM and LIME                                                | Chest Radiology Imaging (Ihongbe et al., 2024)                                                                  |
+|                           |                  |                            |               | Visually explainable DL pipeline                                 | Predict patient with further investigation (Gerbasi et al., 2024)                                               |
+|                           |                  |                            |               | Saliency maps                                                    | classification of Parkinsonas’ disease (Camacho et al., 2023)                                                   |
+|                           |                  |                            |               | saliency and LRP                                                 | Schizophrenia diagnosis (Ellis et al., 2023)                                                                    |
+|                           |                  |                            |               | SHAP and Grad-CAM                                                | COPD diagnosis (Victor Ikechukwu & Murali, 2023)                                                                |
+|                           |                  | Built-in interpretability  | Global/ Local | MICA                                                             | Skin lesion diagnosis (Bie et al., 2024)                                                                        |
+|                           |                  |                            |               | RadFormer                                                        | Detection of Gallbladder cancer (Basu et al., 2023)                                                             |
+|                           |                  |                            |               | IEDL-segmentation-of-heart-tissue                                | Semantic segmentation of  histological structures in heart tissue (Halinkovic et al., 2024)                     |
+|                           |                  |                            |               | SCEMILA                                                          | Identifies diagnostic cells of genetic AML (Hehr et al., 2023)                                                  |
+|                           |                  |                            | Local         |  SDAH-Unet                                                       | Medical image segmentation (Wang et al., 2023)                                                                  |
+|                           |                  |                            |               | MARNet                                                           | Parkinson's severity diagnosis(J. Huang et al., 2024)                                                           |
+|                           |                  |                            |               | U-Net with CNN                                                   | Predict Breast cancer (Rezaeian et al., 2024)                                                                   |
+|                           |                  |                            |               | Causal Bayesian model                                            | Predict the severity of pelvic trauma (Zapaishchykova et al., 2021)                                             |
+|                           |                  |                            |               | X-CFCMC                                                          | Predict colorectal cancer (Sabol et al., 2020)                                                                  |
+|                           |                  |                            |               | ExplAIn                                                          | Predict diabetic retinopathy (Quellec et al., 2021)                                                             |
+| Clustering                | Model-Specific   | Post-hoc                   | Local         | Grad-CAM                                                         | Predict Covid 19(Corizzo et al., 2021)                                                                          |
+## other_data
+### XAI Techniques in CDSS with Other Data Inputs
+[Back](#table_of_contents)
+| CDSS             |                            | Explainability   |                           |               | XAI Technique                                                                 | Clinical Scenario                                                                                          |
+|------------------|----------------------------|------------------|---------------------------|---------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
+| Input Data type  |  Output Category           | Model Dependency | XAI Approach              | Scope         |                                                                               |                                                                                                            |
+| Signals          | Multiclass Classification  | Model-Agnostic   | Post-hoc                  | Global/ Local | SHAP                                                                          | predict cardiovascular status using  ECG (Krzysiak et al., 2023)                                           |
+|                  |                            |                  |                           | Local         | Anchor                                                                        | Predict Hypertension (Casalino et al., 2024)                                                               |
+|                  |                            | Model-specific   | Post-hoc                  | Global        | TCAV                                                                          | EEG Abnormality Detection  (Brenner et al., 2024)                                                          |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  |                            |                  |                           | Local         | Layer-wise Relevance Propagation (LRP-z)                                      | Predict arrhythmia                                                                                         |
+|                  |                            |                  |                           |               |                                                                               | (S. Lee et al., 2024)                                                                                      |
+|                  |                            |                  |                           |               | X-RCRNet                                                                      | Predict Covid-19                                                                                           |
+|                  |                            |                  |                           |               |                                                                               | (Nkengue et al., 2024)                                                                                     |
+|                  |                            |                  |                           |               | CEFEs                                                                         | Classification of abnormal ECG (Maweu et al., 2021)                                                        |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  | Binary Classification      | Model-Agnostic   | Post-hoc                  | Global/ Local | SHAP                                                                          | predictors in post-stroke recovery from EEG (Lin et al., 2024)                                             |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  |                            |                  |                           | Local         | LIME                                                                          | Depression Diagnosis (Feng, 2022)                                                                          |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  |                            | Model-specific   | Post-hoc                  | Global/ Local | GlepNet                                                                       | Epilepsy detection using EEG (Zhou et al., 2024)                                                           |
+|                  |                            |                  |                           | Local         | AM-EEGNet                                                                     | Post-stroke recovery Prediction (Lin et al., 2024)                                                         |
+|                  |                            |                  |                           |               | Grad CAM                                                                      | Predict severity in Parkinsonian Gait (Moon et al., 2024)                                                  |
+|                  |                            |                  | Built-in interpretability | Local         | Natural language explanations                                                 | Predict Schizophrenia  (Guerra et al., 2024)                                                               |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+| Omics Data       | Binary classification      | Model-specific   | Post-hoc                  | Local         | GNN Explainer                                                                 | COVID-19 severity assessment using bronchoalveolar lavage fluid- Gene Expression Matrix  (Li et al., 2023) |
+|                  |                            |                  | Built-in interpretability | Local         | Fuzzy Rule-Based Systems and  EFS                                             | Predic lung cancer (Potie et al., 2019)                                                                    |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  |                            | Model-Agnostic   | Post-hoc                  | Global/ Local | SHAP                                                                          | Predict insulin resistance (Torres-Martos et al., 2024)                                                    |
+|                  | Multiclass Classification  | Model-specific   | Built-in interpretability | Global/ Local | VDJMiner                                                                      | Mine the underlying medical conditions and predict the prognosis of COVID-19(Zhao et al., 2022)            |
+|                  |                            |                  | Post-hoc                  | Local         | GNNExplainer                                                                  | Understand gene interaction (Metsch et al., 2024)                                                          |
+| Multimodal data  | Binary classification      | Model-Agnostic   | Post-hoc                  | Local         | Multi-Modal XAI                                                               | Predict In-hospital mortality   (Ravichandran et al., 2024)                                                |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  | Multiclass class           | Model-specific   | Built-in interpretability | Local         | Neurosymbolic XAI                                                             | Mass Casualty  management support (Vasileiou et al., 2022)                                                 |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+| Time-Series Data | Binary Classification      | Model-Agnostic   | Post-hoc                  | Local         | SHAP+ Linguistic Fuzzy Systems                                                | prediction of antimicrobial multidrug resistance (Martínez-Agüero et al., 2022)                            |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  |                            | Model-Specific   | Built-in interpretability | Local         | TabNet decision masks                                                         | Prediction of cardiac arrest (Kim et al., 2024)                                                            |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  |                            |                  | Post-hoc                  | Both          | DeepSHAP                                                                      | Predict medical events in heart failure patients (Wrazen et al., 2023)                                     |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  | Multi-label Classification | Model-Agnostic   | Post-hoc                  | Global        | Multi-baseline Integrated Gradient pipeline, Integrated Gradients             | Predict Antimicrobial Resistance  (Tharmakulasingam et al., 2023)                                          |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+| unstructured     | Cluster                    | Model-Specific   | Built-in interpretability | Local         | Attention mechanisms                                                          | ICD classification                                                                                         |
+|                  |                            |                  |                           |               |                                                                               |  (Trigueros et al., 2022)                                                                                  |
+|                  |                            |                  |                           | Both          | DirPred                                                                       | Prediction of disease Risk (Niu et al., 2024)                                                              |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  |                            |                  | Post-hoc                  | Both          | Decomposition-based explanation method (features importance, counterfactuals) | Alzheimer's disease                                                                                        |
+|                  |                            |                  |                           |               |                                                                               | classification (Tekkesinoglu & Pudas, 2023)                                                                |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
+|                  | Multi-label Classification | Model-Agnostic   | Post-hoc                  | Local         | Doctor XAI                                                                    | Predict future clinical events                                                                             |
+|                  |                            |                  |                           |               |                                                                               | (Corbucci et al., 2023)                                                                                    |
+|                  |                            |                  |                           |               | Natural language explanation                                                  | Prediction of Anxiety and Depression  (de Arriba-Pérez & García-Méndez, 2024)                              |
+|                  | Recommendation             | Model-Specific   | Built-in interpretability | Local         | CBR                                                                           | Management recommendations (Liu & Tsai, 2024)                                                              |
+|                  |                            |                  |                           |               |                                                                               |                                                                                                            |
 ## XAI Models/Methods in CDSS with Structured Data Inputs
-| CDSS Output Category |Model Specificity   |XAI Model Type |Explanation Scop | XAI Model| Clinical Scenario  |
-|---------------|------------|------------|----------|------------|--------------------------|
-|           |             | |                                                                            |                                                                                                                          |
-| Binary Classification         |    Model-Agnostic      |   Post-hoc               |Global/Local |SHAP                                                                       | [Predicting Occurrence of Acute Kidney Injury after Cardiac surgery](https://doi.org/10.31083/j.rcm2408229)                                                  |
-|                           |                           |                 |                                                                          |  | [Cervical cancer prediction using behavioral risk factors](https://doi.org/10.1016/j.health.2024.100324)                                                           |
-|                           |                           |                 |                                                                           | | [Predicting the conversion of clinically isolated syndrome (CIS) to clinically definite multiple scleÂ­rosis (CDMS)](https://doi.org/10.1016/j.msard.2024.105614) |
-|                           |                           |                 |                                                                            ||  [predict 1-year survival after palliative radiotherapy (RT) for bone<br/>metastasis](https://doi.org/10.1200/CCI.24.00027)                                |
-|                           |                           |                 |                                                                            || [Breast cancer detection](https://doi.org/10.1109/I2CT61223.2024.10543965)                                                                                            |
-|                           |                           |                 |                                                               |SHAP & LIME  | [Prediction of diabetes Management](https://go.openathens.net/redirector/unisa.edu.au?url=https://www.proquest.com/scholarly-journals/explainable-artificial-intelligence-xai/docview/2858093357/se-2?accountid=14649),<br/>[Diabetes prediction using machine learning](https://doi.org/10.1049/htl2.12039) ,<br/>[C-Section prediction](https://doi.org/10.1016/j.compbiomed.2022.105671)                                                            |
-|                           |                           |                 |                                                                           | | [Parkinsonâ€™s Speech  Detection](https://doi.org/10.1109/ICCAR61844.2024.10569414)                                                                                    |
-|                           |                           |                | | SHAP,LIME,ELI5,Qlattice                                                    | [Detection of Polycystic Ovary Syndrome](https://doi.org/10.3390/asi6020032)                                                                              |
-|                           |                           |                 |                                                     | | [Gestational diabetes mellitus prediction using clinical and laboratory markers](https://doi.org/10.1080/23311916.2024.2330266)                                                                              |
-|                           |                           |                 |                                                     | | [Osteoporosis risk prediction](https://doi.org/10.1016/j.heliyon.2023.e22456)                                                                              |
-|                           |  |  | |GSInquire                                                                  | [kidney injury of COVID-19 patients](https://arxiv.org/abs/2204.11210)                                |
-|    |                  | |Local |LIME                                                                       | [Sleep apnoea prediction](https://www.sciencedirect.com/science/article/pii/S1877050922012406) ,<br/>[Breast Cancer Metastasis prediction](https://doi.org/10.1109/TBME.2023.3282840)                                                 |
-|                           |                           |                 |                                                                            || [Detection of COVID-19 before the onset of symptoms](https://doi.org/10.1016/j.imu.2022.100941)                                                                |
-|                           |                           |  |               | Araucana XAI                                                               | [Prediction of hospitalization outcome of patients with liver dieases. & Prediction of death in ICU patients](https://doi.org/10.1016/j.artmed.2022.102471)        |
-| | |   |   | Anchors  | [Gestational diabetes mellitus prediction](https://doi.org/10.1080/23311916.2024.2330266)  |
-|                           |    Model-specific          |    Post-hoc        | Global/ Local|DeepExplainer            | [Lung Cancer Detection](https://doi.org/10.1016/j.cmpb.2023.107879)                  |
-|                      |               |        | | MVR-GA       | [Accurate hepatotoxicity prediction](https://doi.org/10.1109/BIBM55620.2022.9995667)   |
-|| | Built-in Interpretability  | Global/ Local  | OVBLR-SFE | [An intensive care unit readmission prediction case for liver transplantation patients](https://doi.org/10.1016/j.eswa.2023.121138)                    |
-|        |                   | |  Global | Tropical Geometry-Based Interpretable ML Method   | [Identifying heart failure patients that are eligible for advanced therapies](https://doi.org/10.1109/JBHI.2022.3211765)                                |
-|                     |                       |             |          |MV-BRS    |               [Hepatotoxicity prediction]((https://doi.org/10.1109/BIBM58861.2023.10385784) )        |
-| Multiclass Classification |Model-Agonostic                    |Post-hoc |Global/ Local |ELIS5                                                                      | [Brain tumor classification](https://doi.org/10.1016/j.procs.2023.01.182)                                                                                           |
-|                           |                           |              |   | SHaP                                                                       | [Predict the risk factors related to the direct association between obesity and comorbidities](https://doi.org/10.1109/e-Science58273.2023.10254948)                        |
-|                           |                           |                | | SHAP & LIME                                                                | [Predicting fetal abnormalities base on  cardiotocography readings](https://doi.org/10.1109/AAIAC60008.2023.10465473)     |
-|                           |                           |                 || AnEMIC                                                                     | [A Framework for benchmarking ICD Coding Models](https://doi.org/10.18653%2Fv1%2F2022.emnlp-demos.11)                                                                     |
-|                           |                           |                 |Local |LIME                                                                       | [Predict cardiovascular disease risk](https://doi.org/10.1109/BIBM58861.2023.10385315)                                                                               |
-|                           |Model-specific   | Built-in Interpretability |Global/ Local| Explainable Argumentation with Assumptions, Preferences, and Goals (ABA+G) | [Managing co-morbidity and clinical guidelines](https://doi.org/10.1002/lrh2.10391)                                                                      |
-|      |                |  |                                              |       AttentiveSkin       |    [Prediction of risk of skin irritation](https://pubs.acs.org/doi/full/10.1021/acs.chemrestox.3c00332)                                                                        |
-|      |                |  |                                                            |                                                                            |
-|  Survival Analysis                          |  Model-Agonostic                        | Post-hoc   |Global/ Local| SurvSHAP(t)                                                                | [Time-dependent explanations of machine learning survival models](https://doi.org/10.1016/j.knosys.2022.110234)                                                     |
-|                           |                           |              |   | SurvSHAP(t), SurvLIME                 | [Survival in Bone Marrow Transplantation Trials](https://doi.org/10.3390/biomedinformatics3030048)                                                                     |
+[Back](#table_of_contents)
 
-
-
-## Images
-## XAI Models/Methods in CDSS with Imaging Data Inputs
-
-| CDSS Output Category   |  Model Specifity | XAI Model Type |Explanation Scope  | XAI Model/Method   | Clinical Senario   |
-|-----------|-----------|-----------|-----------|-----------|-----------|
-|    Binary classification       | Model-agnostic         |  Post-hoc  | Local|LIME   | [Diabetic Retinopathy Detection](https://doi.org/10.1109/Confluence60223.2024.10463499)                            |
-|           |  Model specific       |   Post-hoc   | Local|Confident-CAM            | [Improving Heat Map Interpretation in Chest X-Ray Classification](https://doi.org/10.1109/BIBM58861.2023.10386065)|
-|        |                     | |  | Eigen Visualization                                                                           | [Automated Detection of Colorectal Polyp](https://ieeexplore.ieee.org/abstract/document/10534764)                              |
-|                           |                           |                 | |CT-xCOV                                                                           | [COVID-19 diagnosis using Deep Learning (DL) on CT-scans](https://doi.org/10.1109/WINCOM59760.2023.10322985)                                                       |
-|                           |   Model specific  | Built-in interpretability  | Local|ExPN-Net                                                                          | [pulmonary nodule diagnosis](https://doi.org/10.1016/j.bspc.2023.105646)                                                                                   |
-|                           |                           |                 | |MProtoNet                                                                         | [Brain Tumur Classification using mpMRI](https://proceedings.mlr.press/v227/wei24a.html)                                                                       |
-|                  |         |                 |Global/ Local |I-AI                                                                              | [Diagnosis support for X-Ray](https://openaccess.thecvf.com/content/WACV2024/html/Pham_I-AI_A_Controllable__Interpretable_AI_System_for_Decoding_Radiologists_WACV_2024_paper.html)                                                                                  |
-|                           |  |   | |NeuroIGN                                                                          | [Image guided brain tumor surgery](https://link.springer.com/article/10.1007/s10916-024-02037-3)                                                                             |
-|      |                 | | | Semantic-Powered Explainable Model-Free Few-Shot Learning Scheme               | [Diagnose of COVID-19](https://doi.org/10.1109/jbhi.2022.3205167)                                                  |
-|                           |                           |                 |                                                                                   |                                                                                                                    |
-| Multiclass classification | Model-agnostic                 |  Post-hoc  | Global |EnsembleXAI                                                                       | [Prediction of the<br/>mortality risk of community-acquired pneumonia and COVID-19](https://doi.org/10.1109/TAI.2022.3153754)                            |
-|                           |                           |                 | |EGAE                                                                              | [Detection of Melanoma](https://doi.org/10.1016/j.compbiomed.2023.106613)                                                                                         |
-|                           |                           |                 | Global/Local|SHaP                                                                              | [Diagnosis of  Acute Lymphoblastic Leukemia](https://doi.org/10.1016/j.eij.2024.100479)                                                                   |
-|                           |                           |                 |                                                                                  | | [Exploring Brain Tumor Segmentation and Patient Survival: An Interpretable Model Approach](https://ceur-ws.org/Vol-3684/p01.pdf)                     |
-|                           |                           |                 |                                                                                   | | [predict the severity level of Alzimer Disease using MRI images](https://doi.org/10.1109/CAISAIS59399.2023.10270042)                                              |
-|                           |                           |                 |                                                                                  | | [Detecting contrast phase in abdominal CT Scan](https://link.springer.com/article/10.1007/s00330-024-10769-6)                                                                 |
-|                           |                           |                 | |MiMICRI                                                                           | [cardiovascular image classification](https://dl.acm.org/doi/abs/10.1145/3630106.3659011)                                                                          |
-|          |                     | | |scifAI                                                                            | [Immunological synapse and functional characterization of therapeutic antibodies](https://www.nature.com/articles/s41467-023-43429-2)                              |
-|                           |   Model specific     | Post-hoc | Local|NeuroXAI                                                                          | [Prediction of brain tumors](https://link.springer.com/article/10.1007/s11548-022-02619-x)                                                                                     |
-|                           |                           |       |          | ResNet-152 combined with Grad–CAM                                                 | [Endoscopic image classification](https://doi.org/10.3390/s23063176)                                                                               |
-|                           |                           |                 | |X-mir                                                                             | [Explainable<br/>image retrieval](https://openaccess.thecvf.com/content/WACV2022/html/Hu_X-MIR_EXplainable_Medical_Image_Retrieval_WACV_2022_paper.html)                                                                                |
-|                           |                           |                | | Grad- CAM                                                                         | [Diagnosis of  Acute Lymphoblastic Leukemia](https://doi.org/10.1016/j.eij.2024.100479)                                                                   |
-|                           |                           |             |    |                                                                                   | [Exploring Brain Tumor Segmentation and Patient Survival: An Interpretable Model Approach](https://ceur-ws.org/Vol-3684/p01.pdf)                     |
-|||||Layer_CAM|[Cervical Cancer Classification](https://doi.org/10.1109/ICCIT60459.2023.10441352) |
-|                           |                           |                 | |IMFSegNet                                                                         | [Quantification of intramuscular fat in histological sections](https://doi.org/10.1016/j.csbj.2023.07.031)                                                  |
-|||||SmoothGrad Faster Score-CAM  |[Skin cancer categorisation ](https://doi.org/10.1109/ICCIT60459.2023.10508527)|
-|           |     |       Built-in interpretability           | Global/Local |MICA                                                                         | [Skin Lesion Diagnosis](https://ojs.aaai.org/index.php/AAAI/article/view/27842)                                                          |
-|                           | |   | |RedFormer                                                                         | [Detection of Gallballder cancer](https://doi.org/10.1016/j.media.2022.102676)                                                                                 |
-|                           |                           |                 | |IEDL-segmentation-of-heart-tissu                                                  | [semantic segmentation of histological structures in heart tissue](https://doi.org/10.1016/j.compbiomed.2024.108624)                                              |
-|                           |                           |    |  Local           | Hybrid Swin Deformable Attention U-Net for Medical Image Segmentation (SDAH-Unet) | [medical image segmentation](https://doi.org/10.1109/SIPAIM56729.2023.10373513)                                                                                   |
-|                           |                           |                | |MARNet                                                                            | [Parkinson's severity diagnosis](https://doi.org/10.1016/j.compbiomed.2024.107959)                                                                               |
-|                           |                           |                 |                                                                                |                                                                                                                    |
-
-
-
-## Other Data types
-## XAI Models/Methods in CDSS with Other* Data Inputs
-
-| CDSS Input Data type                                                           |  CDSS Output Category          | Model Type                | Model Specifity |         XAI Model/s                  |      Clinical Scenario                                                                                        |
-|---------------------------------------------------------------------------|---------------------------|---------------------------|-----------------|---------------------------|----------------------------------------------------------------------------------------------|
-| Molecular Structures (Chemical compounds, drug molecules)                 | Binnary Calssification    | Built-in Interpretability | Model-specific  | AttentiveSkin             | [Prediction of risk of skin irritation](https://pubs.acs.org/doi/full/10.1021/acs.chemrestox.3c00332)                                                  |
-| Protein Structures                                                        | Functional                | Post-hoc                  | Model-Agonostic | Explainable Fold          | [AlphaFold Prediction with Explainable AI](https://doi.org/10.1145/3580305.3599337)                                                |
-| Signals (ECG, EEG, EMG)                                                   | Multiclass Classification | Post-hoc                  | Model-Agonostic | SHaP                      | [predict cardiovascular status using  ECG](https://doi.org/10.1109/DTPI59677.2023.10365417)                                               |
-|                                                                           | Binnary Calssification    | Post-hoc                  | Model-Agonostic | SHaP                      | [predictors in post-stroke recovery from EEG](https://doi.org/10.1016/j.neucom.2024.127622)                                            |
-|                                                                           |                           | Post-hoc                  | Model-specific  |  GlepNet                  | [Epilepsy detection using EEG](https://doi.org/10.1109/TAI.2024.3406289)                                                           |
-| Omics Data (Genomics, Gene expression matrix and single-cell sequencing)) | Binary classification     | Post-hoc                  | Model-specific  |  GNNExplainer             | [Covid19 severity assessment using bronchoalveolar lavage fluid](https://doi.org/10.1109/BIBM58861.2023.10385934) |
-|                                                                           |                           |                           |                 | MV-BRS                    | [Hepatotoxicity prediction](https://doi.org/10.1109/BIBM58861.2023.10385784)                                                              |
-|                                                                           | Multiclass Classification | Post-hoc                  | Model-specific  | VDJMiner                  | [Mine the underlying medical conditions and predict the prognosis of COVID-19](https://doi.org/10.1093/bib/bbac555)             |
-|                                                                           |                           |                           |                 | Gradiant based approached | [Predicting Antimicrobial Resistance (AMR) from genomic sequence data](https://doi.org/10.1109/ACCESS.2022.3216896)                    |
-
-*Molecular Structures (Chemical compounds, drug molecules), Protein Structures, Signals and Omics Data 
-
-## XAI_1
-### XAI Models Details - CDSS with Structred Data Inputs
-<table>
-    <tr>
-        <td>Model </td>
-        <td colspan="3"> Model Output (Binarry/ Muliclass Classfication/ Funtional)</td>
-        <td colspan="2">Timing of interpretability  </td>
-        <td colspan="2">Model Specificity </td>
-        <td>Explainable Methods  </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Bi</td>
-        <td>Multi</td>
-        <td>Func</td>
-        <td>Built-in</td>
-        <td>Post-hoc</td>
-        <td>Agonostic</td>
-        <td>specific</td>
-        <td> </td>
-    </tr>
-    <tr>
-        <td>ABA+G</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Combination of Transition-based Medical Recommendation (TMR) Model and Explainable Argumentation with Assumptions, Preferences, and Goals  </td>
-    </tr>
-    <tr>
-        <td>Anchors</td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Rule-based Explanation </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/dalgu90/icd-coding-benchmark">AnEMIC</a></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Integrated Gradients and attention scores </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/bmi-labmedinfo/araucana-xai">Araucana XAI</a></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Uses a decision tree structure for interpretability. </td>
-    </tr>
-    <tr>
-        <td>Ceteris Paribus Survival Profile</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>Feature Importance, Survival Analysis </td>
-    </tr>
-    <tr>
-        <td>Decision tree </td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Rule-based Systems </td>
-    </tr>
-    <tr>
-        <td><a href="https://
-github.com/niyazwani/DeepXplainer.git">Deep Explainer</a></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>feature importance and visualization techniques </td>
-    </tr>
-    <tr>
-        <td><a href="https://eli5.readthedocs.io/en/latest/overview.html">ELIS5</a></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Explanation by Linear Interactions </td>
-    </tr>
-    <tr>
-        <td><a href="https://eli5.readthedocs.io/en/latest/overview.html">Explainable Fold</a></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Rule-based Systems </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/marcotcr/lime?tab=readme-ov-file">LIME</a></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Feature Importance, Feature Attribution </td>
-    </tr>
-    <tr>
-        <td>Modified LIME</td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Feature Importance, Feature Attribution </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/MLDMXM2017/MVR-GA">MVR-GA</a></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Rule Extraction </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/xqw42/OVBLR-SFE">OVBLR-SFE</a></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Salient Feature Estimation, Bayesian Logistic Regression </td>
-    </tr>
-    <tr>
-        <td><a href="https://docs.abzu.ai/docs/guides/getting_started/quick_start.html">Qlattice</a></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Rule-based Systems </td>
-    </tr>
-    <tr>
-        <td><a href="https://shap.readthedocs.io/en/latest/tabular_examples.html">SHAP</a></td>
-        <td>+</td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Feature Importance, Feature Attribution </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/imatge-upc/SurvLIMEpy">SurvLIME</a></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>Feature Importance, Survival Analysis </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/MI2DataLab/survshap">SurvSHAP(t)</a></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>Feature Importance, Survival Analysis </td>
-    </tr>
-</table>
+| XAI   technique                                                    | CDSS Input data type |       |              |         |       |             |            |    CDSS Output Type   |                           |                           |                     |            |            |                 |         |                   | Model Dependency |                | XAI Approach              |          |  Scope |       |
+|--------------------------------------------------------------------|:--------------------:|:-----:|:------------:|:-------:|:-----:|:-----------:|:----------:|:---------------------:|:-------------------------:|:-------------------------:|:-------------------:|:----------:|:----------:|:---------------:|:-------:|:-----------------:|------------------|----------------|---------------------------|----------|:------:|:-----:|
+|                                                                    |           Structured | Image | Unstructured | Signals | Omics | Time-series | Multimodal | Binary Classification | Multiclass Classification | Multilabel Classification | Risk Stratification | Regression | Clustering | Recommendations | Ranking | Survival analysis |   Model-Agnostic | Model-specific | Built-in Interpretability | Post-hoc | Global | Local |
+| ABA+G                                                              |           +          |       |              |         |       |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| Anchors                                                            |           +          |       |              |    +    |       |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |        |   +   |
+| AnEMIC                                                             |           +          |       |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |    +   |   +   |
+| Araucana XAI                                                       |           +          |       |              |         |       |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |        |   +   |
+| AttentiveSkin                                                      |           +          |       |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| Bayesian   Network                                                 |           +          |       |              |         |       |             |            |                       |                           |                           |                     |            |            |                 |    +    |                   |                  |        +       |                           |     +    |        |   +   |
+| BoCSoR measure                                                     |           +          |       |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |    +   |       |
+| CBR                                                                |           +          |       |       +      |         |       |             |            |           +           |                           |                           |                     |            |            |        +        |         |                   |                  |        +       |             +             |          |        |   +   |
+| Counterfactual                                                     |           +          |       |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |    +    |                   |         +        |                |                           |     +    |        |   +   |
+| Decision tree                                                      |           +          |       |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| Deep Explainer                                                     |           +          |   +   |              |         |       |             |            |           +           |             +             |                           |                     |      +     |            |                 |         |                   |                  |        +       |                           |     +    |    +   |   +   |
+| DeepSHAP                                                           |           +          |       |              |         |       |      +      |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |    +   |   +   |
+| EBML                                                               |           +          |       |              |         |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| ELI5                                                               |           +          |   +   |              |         |       |             |            |           +           |             +             |                           |                     |      +     |            |                 |         |                   |         +        |                |                           |     +    |    +   |   +   |
+| EXPLAIN                                                            |           +          |       |              |         |       |             |            |                       |                           |                           |                     |            |            |        +        |         |                   |                  |        +       |             +             |          |        |   +   |
+| fuzzy logic based XAI                                              |           +          |       |              |         |       |             |            |                       |                           |                           |          +          |            |            |        +        |         |                   |                  |        +       |             +             |          |        |   +   |
+| GSInquire                                                          |           +          |       |              |         |   +   |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |    +   |   +   |
+| GT model                                                           |           +          |       |              |         |       |             |            |                       |                           |             +             |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| Interactive   Rainbow Boxes                                        |           +          |       |              |         |       |             |            |                       |                           |                           |          +          |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| LIME                                                               |           +          |   +   |              |         |       |             |            |           +           |             +             |                           |                     |      +     |            |                 |         |                   |         +        |                |                           |     +    |        |   +   |
+| MV-BRS                                                             |           +          |       |              |         |       |             |            |           +           |             +             |                           |                     |      +     |            |                 |         |                   |                  |        +       |             +             |          |    +   |       |
+| MVR-GA                                                             |           +          |       |              |         |       |             |            |           +           |                           |                           |                     |      +     |            |                 |         |                   |                  |        +       |                           |     +    |    +   |       |
+| OVBLR-SFE                                                          |           +          |       |              |         |       |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| Patient   Similarity Analytics                                     |           +          |       |              |         |       |             |            |                       |                           |                           |          +          |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| Qlattice                                                           |           +          |       |              |         |       |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |    +   |       |
+| SHAP                                                               |           +          |   +   |              |    +    |       |             |            |           +           |             +             |                           |                     |      +     |            |                 |         |         +         |         +        |                |                           |     +    |    +   |   +   |
+| SurvLIME                                                           |           +          |       |              |         |       |             |            |                       |                           |                           |                     |            |            |                 |         |         +         |         +        |                |                           |     +    |    +   |   +   |
+| SurvSHAP(t)                                                        |           +          |       |              |         |       |             |            |                       |                           |                           |                     |            |            |                 |         |         +         |         +        |                |                           |     +    |    +   |   +   |
+| Tropical   geometry-based interpretable ML method                  |           +          |       |              |         |       |             |            |           +           |             +             |                           |                     |      +     |      +     |                 |         |                   |                  |        +       |             +             |          |    +   |       |
+| XAHN                                                               |           +          |       |              |         |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
 
 
 ## XAI_2
 ### XAI Models Details - CDSS with Image Data Inputs
 
-<table>
-    <tr>
-        <td>Model </td>
-        <td colspan="3">Output Type</td>
-        <td colspan="2">Timing of interpretability</td>
-        <td colspan="2">XAI Model speciity</td>
-        <td>Explainable Methods  </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td>Bi</td>
-        <td>Multi</td>
-        <td>Func</td>
-        <td>Built-in Interpretability</td>
-        <td>Post-hoc</td>
-        <td>Model-Agonostic</td>
-        <td>Model-specific</td>
-        <td>Explainable Methods  </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/JoanaNRocha/Confident-CAM">Confident-CAM</a> </td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>Heatmaps, Feature Importance </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/ismailelbouknify/CT-xCOV">CT-xCOV</a></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Textual justification; Visualisation </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/KhaosResearch/EGAE">EGAE</a></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Image Segmentation </td>
-    </tr>
-    <tr>
-        <td>Eigen Visualisation</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>localization</td>
-    </tr>
-    </td>
-    </tr>
-    <tr>
-        <td>EnsembleXAI</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>image Classfication </td>
-    </tr>
-    <tr>
-        <td><a href=" https://github.com/isha-67/CervicalCancerStudy">Explainable Contrastive and Cost-Sensitive Learning for Cervical Cancer</a></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>Contrastive Learning, Cost-Sensitive Learning, Visualization </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/KumoLiu/explainablePN">ExPN-Net</a></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Visualization, Feature Importance, Heatmaps </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/wlc2424762917/SDAH UNet">SDAH-Unet</a></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Attention Maps, Feature Visual </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/UARK-AICV/IAI">I-AI</a></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Attention Maps, Heatmaps, Feature Importance </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/applied-systems-biology/sheepfat">IMFSegNet</a></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Image Segmentation </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/Faysal-MD/An-Interpretable-Deep-Learning-
-Approach-for-Skin-Cancer-Categorization-IEEE2023
-">Interpretable DL for Skin Cancer Categorization</a></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Feature Importance, Heatmaps, Visualization </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/mathali/IEDL-segmentation-of-heart-tissue">Intrinsically explainable DL for heart tissue segmentation</a></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Semantic Segmentation, Visualization </td>
-    </tr>
-    <tr>
-        <td>LIME</td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Feature Importance , Heatmaps </td>
-    </tr>
-    <tr>
-        <td>MARNet </td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>visualization and feature importance  </td>
-    </tr>
-    <tr>
-        <td>MICA</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Concept Alignment, Feature Attribution </td>
-    </tr>
-    <tr>
-        <td>MiMICRI</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>Counterfactual Explanations, Feature Importance </td>
-    </tr>
-    <tr>
-        <td>ML-ConvNet</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>Image Segmentation </td>
-    </tr>
-    <tr>
-        <td>MProtoNet</td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Case-Based Reasoning, Feature Importance </td>
-    </tr>
-    <tr>
-        <td>NeuroGen</td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Visualization, Feature Importance </td>
-    </tr>
-    <tr>
-        <td>NeuroXAI</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>image Classfication, Image Segmentation </td>
-    </tr>
-    <tr>
-        <td>RadFormer</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>Image Localization </td>
-    </tr>
-    <tr>
-        <td>ResNet-152 combined with Grad–CAM</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>image Classfication </td>
-    </tr>
-    <tr>
-        <td>scifAI </td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td>+</td>
-        <td>+</td>
-        <td>+</td>
-        <td>&quot;</td>
-    </tr>
-    <tr>
-        <td>Semantic-Powered Explainable Model-Free Few-Shot Learning Scheme</td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>image Classfication </td>
-    </tr>
-    <tr>
-        <td>X-mir</td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>image Classfication </td>
-    </tr>
-</table>
+| XAI   technique                                                    | CDSS Input data type |       |              |         |       |             |            |    CDSS Output Type   |                           |                           |                     |            |            |                 |         |                   | Model Dependency |                | XAI Approach              |          |  Scope |       |
+|--------------------------------------------------------------------|:--------------------:|:-----:|:------------:|:-------:|:-----:|:-----------:|:----------:|:---------------------:|:-------------------------:|:-------------------------:|:-------------------:|:----------:|:----------:|:---------------:|:-------:|:-----------------:|------------------|----------------|---------------------------|----------|:------:|:-----:|
+|                                                                    |           Structured | Image | Unstructured | Signals | Omics | Time-series | Multimodal | Binary Classification | Multiclass Classification | Multilabel Classification | Risk Stratification | Regression | Clustering | Recommendations | Ranking | Survival analysis |   Model-Agnostic | Model-specific | Built-in Interpretability | Post-hoc | Global | Local |
+| Semantic-Powered   Explainable Model-Free Few-Shot Learning Scheme |                      |   +   |              |         |       |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| CAM                                                                |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| Causal   Bayesian model                                            |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| CIU                                                                |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |        |   +   |
+| Confident-CAM                                                      |                      |   +   |              |         |       |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| CovNet                                                             |                      |   +   |              |         |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |        |   +   |
+| CT-xCOV                                                            |                      |   +   |              |         |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| EBXAI                                                              |                      |   +   |              |         |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| EGAE                                                               |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |    +   |       |
+| Eigen   Visualisation                                              |                      |   +   |              |         |       |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| EnsembleXAI                                                        |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |    +   |       |
+| ExAID                                                              |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |        |   +   |
+| ExplAIn                                                            |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| Explainer   framework                                              |                      |   +   |              |         |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| ExPN-Net                                                           |                      |   +   |              |         |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| Faster   Score-CAM                                                 |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |                |                           |     +    |        |   +   |
+| Grad-Cam                                                           |                      |   +   |              |         |   +   |             |            |                       |             +             |             +             |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| Hybrid   Swin Deformable Attention U-Net -SDAH-Unet                |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| I-AI                                                               |                      |   +   |              |         |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| IEDL-segmentation-of-heart-tissue                                  |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| IMFSegNet                                                          |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| Layer-CAM                                                          |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| LRP                                                                |                      |   +   |              |    +    |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| MARNet                                                             |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| MICA                                                               |                      |   +   |              |         |       |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| MiMICRI                                                            |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |    +   |   +   |
+| MProtoNet                                                          |                      |   +   |              |         |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| Multimodal explainability                                          |                      |   +   |              |         |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |         +        |                |             +             |          |        |   +   |
+| NeuroXAI                                                           |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| Neuro-XAI                                                          |                      |   +   |              |         |       |             |            |                       |                           |             +             |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| RadFormer                                                          |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| ResNet-152   combined with Grad–CAM                                |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| Saliency   maps                                                    |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| SCEMILA                                                            |                      |   +   |              |         |       |             |            |                       |                           |             +             |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| SmoothGrad                                                         |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| U-Net                                                              |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| Visually   explainable DL pipeline                                 |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |        |   +   |
+| X-CFCMC                                                            |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| X-mir                                                              |                      |   +   |              |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+
 
 ## XAI_3
-### XAI Models Details - CDSS with Other* Data Inputs
+### XAI Models Details - CDSS with Other Data types Inputs
 
-<table>
-    <tr>
-        <td>Model </td>
-        <td>Input Data type</td>
-        <td colspan="3">Output Type</td>
-        <td colspan="2">Timing of interpretability</td>
-        <td colspan="2">XAI Model speciity</td>
-        <td>Explainable Methods  </td>
-    </tr>
-    <tr>
-        <td></td>
-        <td></td>
-        <td>Bi</td>
-        <td>Multi</td>
-        <td>Fun </td>
-        <td>Built-in Interpretability</td>
-        <td>Post-hoc</td>
-        <td>Model-Agonostic</td>
-        <td>Model-specific</td>
-        <td>Explainable Methods  </td>
-    </tr>
-    <tr>
-        <td>AM-EEGNet:</td>
-        <td>EEG Signal</td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td></td>
-        <td>SHaP (Feature Importance) </td>
-    </tr>
-    <tr>
-        <td>AttentiveSkin</td>
-        <td>Moleecular Structure</td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td>+</td>
-        <td>+</td>
-        <td>+</td>
-        <td>SHAP (Feature Importance), Attention Mechanisms, Visualization </td>
-    </tr>
-    <tr>
-        <td>GlepNet</td>
-        <td>EEG Signal</td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>Grad-CAM identifies the most important features and regions that contribute to the model’s predictions </td>
-    </tr>
-    <tr>
-        <td>GNNExplainer</td>
-        <td>Gene Expression Matrix </td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td> identifies the most important features and subgraphs that contribute to the model’s predictions </td>
-    </tr>
-    <tr>
-        <td>Multi-View Learning-Based Bayesian Ruleset Extraction algorithm (MV-BRS)</td>
-        <td>Omics</td>
-        <td>+</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>+</td>
-        <td></td>
-        <td>+</td>
-        <td>Bayesian rule extraction </td>
-    </tr>
- 
-   
-  
-</table>
-*Molecular Structures (Chemical compounds, drug molecules), Protein Structures, Signals and Omics Data 
+| XAI   technique                                                    | CDSS Input data type |       |              |         |       |             |            |    CDSS Output Type   |                           |                           |                     |            |            |                 |         |                   | Model Dependency |                | XAI Approach              |          |  Scope |       |
+|--------------------------------------------------------------------|:--------------------:|:-----:|:------------:|:-------:|:-----:|:-----------:|:----------:|:---------------------:|:-------------------------:|:-------------------------:|:-------------------:|:----------:|:----------:|:---------------:|:-------:|:-----------------:|------------------|----------------|---------------------------|----------|:------:|:-----:|
+|                                                                    |           Structured | Image | Unstructured | Signals | Omics | Time-series | Multimodal | Binary Classification | Multiclass Classification | Multilabel Classification | Risk Stratification | Regression | Clustering | Recommendations | Ranking | Survival analysis |   Model-Agnostic | Model-specific | Built-in Interpretability | Post-hoc | Global | Local |
+| Attention mechanisms                                               |                      |       | +            |         |       |             |            |                       |                           | +                         |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| Decomposition-based XAI                                            |                      |       | +            |         |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |    +   |   +   |
+| DirPred                                                            |                      |       | +            |         |       |             |            |                       |                           |                           |                     |            | +          |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| Doctor XAI                                                         |                      |       | +            |         |       |             |            |                       |                           | +                         |                     |            |            |                 |         |                   |         +        |                |                           |     +    |        |   +   |
+| Natural   language explanations                                    |                      |       | +            | +       |       |             |            |           +           |                           | +                         |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |       |
+| AM-EEGNet                                                          |                      |       |              | +       |       |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| CEFEs                                                              |                      |       |              | +       |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| GlepNet                                                            |                      |       |              | +       |       |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |    +   |   +   |
+| TCAV                                                               |                      |       |              | +       |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |    +   |       |
+| X-RCRNet                                                           |                      |       |              | +       |       |             |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| Fuzzy   Rule-Based                                                 |                      |       |              |         | +     |             |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
+| GNNExplainer                                                       |                      |       |              |         | +     |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |        |   +   |
+| VDJMiner                                                           |                      |       |              |         | +     |             |            |           +           |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| IG                                                                 |                      |       |              |         |       | +           |            |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |                           |     +    |    +   |       |
+| TabNet   decision masks                                            |                      |       |              |         |       | +           |            |           +           |                           |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |    +   |   +   |
+| Multi-Modal   XAI                                                  |                      |       |              |         |       |             | +          |           +           |                           |                           |                     |            |            |                 |         |                   |         +        |                |                           |     +    |        |   +   |
+| Neurosymbolic   XAI                                                |                      |       |              |         |       |             | +          |                       |             +             |                           |                     |            |            |                 |         |                   |                  |        +       |             +             |          |        |   +   |
