@@ -312,6 +312,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 ## XAI_2
 ### XAI Models Details - CDSS with Image Data Inputs
+[Back](#table_of_contents)
 
 | XAI   technique                                                    | CDSS Input data type |       |              |         |       |             |            |    CDSS Output Type   |                           |                           |                     |            |            |                 |         |                   | Model Dependency |                | XAI Approach              |          |  Scope |       |
 |--------------------------------------------------------------------|:--------------------:|:-----:|:------------:|:-------:|:-----:|:-----------:|:----------:|:---------------------:|:-------------------------:|:-------------------------:|:-------------------:|:----------:|:----------:|:---------------:|:-------:|:-----------------:|------------------|----------------|---------------------------|----------|:------:|:-----:|
@@ -359,7 +360,7 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 ## XAI_3
 ### XAI Models Details - CDSS with Other Data types Inputs
-
+[Back](#table_of_contents)
 | XAI   technique                                                    | CDSS Input data type |       |              |         |       |             |            |    CDSS Output Type   |                           |                           |                     |            |            |                 |         |                   | Model Dependency |                | XAI Approach              |          |  Scope |       |
 |--------------------------------------------------------------------|:--------------------:|:-----:|:------------:|:-------:|:-----:|:-----------:|:----------:|:---------------------:|:-------------------------:|:-------------------------:|:-------------------:|:----------:|:----------:|:---------------:|:-------:|:-----------------:|------------------|----------------|---------------------------|----------|:------:|:-----:|
 |                                                                    |           Structured | Image | Unstructured | Signals | Omics | Time-series | Multimodal | Binary Classification | Multiclass Classification | Multilabel Classification | Risk Stratification | Regression | Clustering | Recommendations | Ranking | Survival analysis |   Model-Agnostic | Model-specific | Built-in Interpretability | Post-hoc | Global | Local |
@@ -384,10 +385,8 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 * [Ahamed, M. F., Islam, M. R., Nahiduzzaman, M., Karim, M. J., Ayari, M. A., & Khandakar, A. (2024). Automated Detection of Colorectal Polyp Utilizing Deep Learning Methods With Explainable AI. IEEE Access, 12, 78074-78100. https://doi.org/10.1109/ACCESS.2024.3402818]()
 
-References
-
-
-
+## References
+[Back](#table_of_contents)
 * Aboutalebi, H., Pavlova, M., Shafiee, M. J., Florea, A., Hryniowski, A., & Wong, A. (2022). COVID-Net Biochem: an explainability-driven framework to building machine learning models for predicting survival and kidney injury of COVID-19 patients from clinical and biochemistry data. arXiv preprint arXiv:2204.11210. 
 * Ahamed, M. F., Islam, M. R., Nahiduzzaman, M., Karim, M. J., Ayari, M. A., & Khandakar, A. (2024). Automated Detection of Colorectal Polyp Utilizing Deep Learning Methods With Explainable AI. IEEE Access, 12, 78074-78100. https://doi.org/10.1109/ACCESS.2024.3402818 
 * Ahmad, A., & Mehfuz, S. (2022). Explainable AI-Based Early Detection of Diabetes for Smart Healthcare. IET Conference Proceedings, 
