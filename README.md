@@ -12,7 +12,10 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 ```
 1.	What is the input data type of the CDSS?
 2.	What is the output type of the CDSS?
-3.	Does the CDSS require an inherently understandable model to generate explanations, or can explanations be added after the model is built?
+3.	Should the explanation be designed for a specific AI model or work across different models?
+4.	Should explanations be built into the CDSS, or applied after its development? 
+5.	Should the explanation provide overall model behaviour or focus on individual prediction reasoning, or both?
+
 ```
 
 ## Table_of_contents
