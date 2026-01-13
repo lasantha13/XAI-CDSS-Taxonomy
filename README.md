@@ -16,17 +16,62 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 ```
 
 ## Table_of_contents
-#### A. Classification of XAI Models/Methods in CDSS Based on Input Data Types with Clinical Application Examples
-1. [XAI Techniques in CDSS with Structured Data Inputs](#structured_data)
-2. [XAI Techniques in CDSS with Imaging Data Inputs](#images)
-3. [XAI Techniques in CDSS with Other* Data Inputs](#other_data)
+#### A. Input Data Types and Oupt type Classifications
+1. [Table 1: CDSS input data types](#input_datatypes)
+2. [Table 2: CDSS Output types](#output_types)
+
+#### B. Classification of XAI Models/Methods in CDSS Based on Input Data Types with Clinical Application Examples
+1. [Table 3: XAI Techniques in CDSS with Structured Data Inputs](#structured_data)
+2. [Table 4: XAI Techniques in CDSS with Imaging Data Inputs](#images)
+3. [Table 5: XAI Techniques in CDSS with Other* Data Inputs](#other_data)
 
 
 
-#### B. [XAI Techniques Analysis Matrix](#xai_m1)
+#### C. [Table 6: XAI Techniques Analysis Matrix](#xai_m1)
 
 
 
+
+## input_datatypes
+
+Table 1: CDSS input data types
+
+| Data Type | Description | Examples |
+| :---- | :---- | :---- |
+| Structured data | Tabular, coded data with a predefined schema | Medications, vitals, demographics. |
+| Semi-structured data | Loosely structured data formats | HL7 messages, JSON-encoded clinical forms |
+| Unstructured data | Narrative free-text | Clinical notes, radiology reports, discharge summaries |
+| Imaging data | Visual data, including medical images and clinical photographs | CT, MRI, X-ray and  digital photographs of skin lesions, wounds |
+| Signal data | Continuous physiological measurements are captured digitally via biomedical sensors or electrodes. | ECG, EEG, PPG, |
+| Time-series data | Sequential clinical data points indexed by time | Vitals over time, medication history |
+| Multi-omics data | High-dimensional biological data | Genomics, proteomics |
+| Multimedia Data | Audio, video, or multimodal data. | Voice recordings, gait videos |
+| Geospatial Data | Geographic coordinates and spatial information | Patient location, disease mapping coordinates |
+
+## output_types
+
+Table 2 : CDSS Outtypes
+
+| Primary Output Type | Subcategory | Description | Example in AI-CDSS |
+| :---- | :---- | :---- | :---- |
+| Classification | Binary Classification | Assigns input to one of two discrete categories | Disease diagnosis: yes/no |
+|   | Multi-class classification | Assigns input to one of multiple discrete categories | Disease subtype classification |
+|   | Multi-label classification | Assign multiple non-exclusive labels simultaneously | Multiple concurrent diagnoses |
+|   | Risk stratification | Classifies patients into predefined risk categories | High/medium/low-risk grouping |
+| Regression | Single-output regression | Predicts one continuous numeric value | Length of stay estimation |
+|   | Multi-output regression | Predicts multiple continuous values simultaneously | Multiple biomarker levels |
+|   | Score estimation | Computes standard clinical risk or severity scores | SOFA, APACHE II, CHADS2 |
+| Clustering | Patient phenotyping | Group patients with similar characteristics | Disease subgroup discovery |
+|   | Unsupervised grouping | Identifies natural groupings in data | Treatment response clusters |
+| Ranking | Differential ranking | Order items by predicted relevance or probability | Differential diagnosis list |
+|   | Priority ranking | Orders by urgency or clinical importance | Triage queue |
+| Recommendation |   | Suggests optimal clinical interventions | Drug recommendation |
+| Anomaly detection | Outlier identification | Identifies rare or abnormal patterns | Alert for abnormal vitals |
+|  | Change detection | Detects significant deviations from baseline | Sudden clinical deterioration |
+| Temporal & survival modelling | Time-to-event prediction | Predicts the time until a clinical event occurs | Time to readmission, mortality risk |
+|  | Sequence forecasting | Predicts future clinical events or trends | ICU event forecasting |
+|  | Trajectory modelling | Model disease progression over time | Treatment response prediction |
+| Generative outputs | Natural language generation | Generates human-readable clinical text | Draft discharge summaries, reports |
 
 
 ## Structured_Data
