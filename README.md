@@ -75,7 +75,7 @@ Table 2 : CDSS Outtypes
 
 
 ## Structured_Data
-### XAI Techniques in CDSS with Structured Data Inputs                  
+### Table 3: XAI Techniques in CDSS with Structured Data Inputs                  
 [Back](#table_of_contents)
 
 | CDSS Output                | Model Dependency | XAI Approach              | Scope          | XAI Technique                                                                                     | Clinical Scenario                                                                                                                        |
@@ -196,7 +196,7 @@ Table 2 : CDSS Outtypes
                                                                                                                                       |
 
 ## Images 
-### XAI Techniques in CDSS with Imaging Data Inputs
+### Table 4: XAI Techniques in CDSS with Imaging Data Inputs
 [Back](#table_of_contents)
 | CDSS Output               | Model Dependency | XAI Approach               | Scope         | XAI Technique                                                    | Clinical Scenario                                                                                               |
 |---------------------------|------------------|----------------------------|---------------|------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------|
@@ -262,7 +262,7 @@ Table 2 : CDSS Outtypes
 |                           |                  |                            |               | ExplAIn                                                          | Predict diabetic retinopathy (Quellec et al., 2021)                                                             |
 | Clustering                | Model-Specific   | Post-hoc                   | Local         | Grad-CAM                                                         | Predict Covid 19(Corizzo et al., 2021)                                                                          |
 ## other_data
-### XAI Techniques in CDSS with Other Data Inputs
+### Table 5: XAI Techniques in CDSS with Other Data Inputs
 [Back](#table_of_contents)
 | CDSS             |                            | Explainability   |                           |               | XAI Technique                                                                 | Clinical Scenario                                                                                          |
 |------------------|----------------------------|------------------|---------------------------|---------------|-------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
@@ -317,7 +317,7 @@ Table 2 : CDSS Outtypes
 |                  | Recommendation             | Model-Specific   | Built-in interpretability | Local         | CBR                                                                           | Management recommendations (Liu & Tsai, 2024)                                                              |
 |                  |                            |                  |                           |               |                                                                               |                                                                                                            |
 ### XAI_M1
-## XAI Techniques Analysis Matrix
+## Table 6: XAI Techniques Analysis Matrix
 [Back](#table_of_contents)
 
 | XAI technique | CDSS Input data type|      |   |  |    |      || CDSS Output Type||||||||| Model Dependency||XAI Approach|| XAI Scope||
