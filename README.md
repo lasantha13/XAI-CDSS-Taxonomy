@@ -6,7 +6,7 @@
 ## 
 This Taxonomic Guide is designed to support CDSS developers in finding suitable XAI methods for their applications. Commonly used XAI models and related clinical use cases are listed below.
 
-This repository was created as part of the PhD project of Dr. Lasantha Ranwaala, University of South Australia.
+This repository was created as part of the PhD project of Dr. Lasantha Ranwaala, Adelaide University of South Australia.
 
 To follow our taxonomy, user need to answer three basic questions about the CDSS they intended to generate explanations .
 ```
