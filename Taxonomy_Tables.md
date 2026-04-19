@@ -18,19 +18,17 @@ To follow our taxonomy, user need to answer three basic questions about the CDSS
 
 ```
 
-## Table_of_contents
-#### A. Input Data Types and Oupt type Classifications
+## Taxonomy Dimensions
+### A. CDSS Input Data Types and Oupt type Classifications
 1. [Table 1: CDSS input data types](#input_datatypes)
 2. [Table 2: CDSS Output types](#output_types)
-
-#### B. Classification of XAI Models/Methods in CDSS Based on Input Data Types with Clinical Application Examples
+### [B.XAI classification dimensions](#xai_classfication) 
+## Selection Guide Tables
 1. [Table 3: XAI Techniques in CDSS with Structured Data Inputs](#structured_data)
 2. [Table 4: XAI Techniques in CDSS with Imaging Data Inputs](#images)
 3. [Table 5: XAI Techniques in CDSS with Other* Data Inputs](#other_data)
 
-
-
-#### C. [Table 6: XAI Techniques Analysis Matrix](#xai_m1)
+## Subplementroy information: [Table 6: XAI Techniques Analysis Matrix](#xai_m1)
 
 
 
@@ -76,6 +74,10 @@ Table 2 : CDSS Outtypes
 |  | Trajectory modelling | Model disease progression over time | Treatment response prediction |
 | Generative outputs | Natural language generation | Generates human-readable clinical text | Draft discharge summaries, reports |
 
+## xai_classfication
+>1.	Model dependency: XAI techniques are divided into model-agnostic and model-specific methods based on model dependency. 
+>2.	XAI Approach: Particular XAI methods can be developed during model training through in-built interpretability or after model development using post-hoc methods 
+>3.	XAI Explanation Scope: In the context of XAI, the scope of explanations can be categorised as either global explanations, which provide insights into the overall model behaviour, or local explanations, which focus on individual predictions. 
 
 ## Structured_Data
 ### Table 3: XAI Techniques in CDSS with Structured Data Inputs                  
