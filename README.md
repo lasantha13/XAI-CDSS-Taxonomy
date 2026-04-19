@@ -5,7 +5,9 @@
 
 This repository accompanies the following publication:
 
-> [Author names]. "[Full paper title]". [Journal Name], [Year]. DOI: [paper DOI]
+>R A D L M K Ranwala 1*, Libby Roughead 1, Jean-Pierre Calabretto 2 and Andre Q. Andrade 1 . "[A Taxonomic Guide to Explainable AI (XAI) Technique 
+Selection in Clinical Decision Support Systems
+]". [Information Journal ], [2026]. DOI: [DOI]
 
 This paper presents a taxonomic guide to assist developers and researchers 
 in selecting appropriate Explainable AI (XAI) techniques for AI-based 
@@ -46,31 +48,23 @@ See `taxonomy_tables.md` for the complete tables.
 
 ## How to Use the Taxonomy
 
-1. Identify your **CDSS input data type** (structured, image, or other)
-   and navigate to the corresponding table in `taxonomy_tables.md`
-2. Filter by your **CDSS output type** 
-   (e.g. binary classification, risk score, recommendation)
-3. Filter by your **model dependency** preference 
-   (model-agnostic or model-specific)
-4. Review the matching XAI techniques and their associated 
-   clinical scenarios to identify the most appropriate method 
-   for your use case
+1.	What is the input data type of the CDSS?
+2.	What is the output type of the CDSS?
+3.	Should the explanation be designed for a specific AI model or work across different models?
+4.	Should explanations be built into the CDSS, or applied after its development? 
+5.	Should the explanation provide overall model behaviour or focus on individual prediction reasoning, or both?
 
 ---
 
 ## How Reported Counts Were Derived
 
 - **341 initial records** were identified through database searches 
-  across [list your databases e.g. PubMed, Scopus, IEEE Xplore, 
-  and preprint servers], conducted in [month/year of search]
+  across [Scopus, IEEE Xplore,and preprint servers] published up to 31st December 2024.
 - **183 studies** were included following title/abstract screening 
   and full-text review applying the inclusion and exclusion criteria 
   reported in the manuscript
 - **86 XAI techniques** were identified by extracting unique technique 
-  names from all included studies. Recognised variants were consolidated 
-  under a single label (for example, Grad-CAM and Gradient-weighted 
-  Class Activation Mapping were treated as one technique)
-
+  names from all included studies. 
 Full details of the search strategy, inclusion and exclusion criteria, 
 and screening methodology are reported in the published manuscript 
 (see DOI above).
@@ -81,7 +75,7 @@ and screening methodology are reported in the published manuscript
 
 The screening log and extracted dataset underlying this review are 
 available from the corresponding author upon reasonable request. 
-Please contact [corresponding author email].
+Please contact a3151038@adelaide.edu.au.
 
 ---
 
@@ -92,14 +86,7 @@ If you use this taxonomy in your work, please cite the original paper:
 > [Full citation in your target journal format]
 
 ---
-
-## License
-
-[Choose one: e.g. Creative Commons CC BY 4.0]
-
----
-
 ## Contact
 
 For questions regarding the taxonomy or repository content, 
-please contact [corresponding author name] at [email address].
+please contact Dr Lasantha Ranwala at a3151038@adelaide.edu.au.
