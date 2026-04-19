@@ -3,26 +3,12 @@
 
 ![Project Logo](ai33.png)
 
-## 
-This Taxonomic Guide is designed to support CDSS developers in finding suitable XAI methods for their applications. Commonly used XAI models and related clinical use cases are listed below.
-
-This repository was created as part of the PhD project of Dr. Lasantha Ranwaala, Adelaide University of South Australia.
-
-To follow our taxonomy, user need to answer three basic questions about the CDSS they intended to generate explanations .
-```
-1.	What is the input data type of the CDSS?
-2.	What is the output type of the CDSS?
-3.	Should the explanation be designed for a specific AI model or work across different models?
-4.	Should explanations be built into the CDSS, or applied after its development? 
-5.	Should the explanation provide overall model behaviour or focus on individual prediction reasoning, or both?
-
-```
-
 ## Taxonomy Dimensions
 ### A. CDSS Input Data Types and Oupt type Classifications
 1. [Table 1: CDSS input data types](#input_datatypes)
 2. [Table 2: CDSS Output types](#output_types)
-### [B.XAI classification dimensions](#xai_classfication) 
+### [B.XAI classification dimensions](#xai_classification) 
+
 ## Selection Guide Tables
 1. [Table 3: XAI Techniques in CDSS with Structured Data Inputs](#structured_data)
 2. [Table 4: XAI Techniques in CDSS with Imaging Data Inputs](#images)
@@ -74,7 +60,7 @@ Table 2 : CDSS Outtypes
 |  | Trajectory modelling | Model disease progression over time | Treatment response prediction |
 | Generative outputs | Natural language generation | Generates human-readable clinical text | Draft discharge summaries, reports |
 
-## xai_classfication
+## xai_classification
 >1.	Model dependency: XAI techniques are divided into model-agnostic and model-specific methods based on model dependency. 
 >2.	XAI Approach: Particular XAI methods can be developed during model training through in-built interpretability or after model development using post-hoc methods 
 >3.	XAI Explanation Scope: In the context of XAI, the scope of explanations can be categorised as either global explanations, which provide insights into the overall model behaviour, or local explanations, which focus on individual predictions. 
