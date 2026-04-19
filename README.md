@@ -31,9 +31,9 @@ yielding 183 included studies and 86 identified XAI techniques.
 The taxonomy organises XAI techniques across three selection guide tables 
 based on CDSS input data type:
 
-- **Table 1** — Structured/tabular data inputs
-- **Table 2** — Image data inputs  
-- **Table 3** — Other data inputs (text, time-series, multimodal)
+- **Table 3** — Structured/tabular data inputs
+- **Table 4** — Image data inputs  
+- **Table 5** — Other data inputs (text, time-series, multimodal)
 
 Each table maps XAI techniques across five dimensions:
 1. CDSS Output Type
@@ -47,7 +47,7 @@ See `taxonomy_tables.md` for the complete tables.
 ---
 
 ## How to Use the Taxonomy
-
+To select suitable XAI techniques for an AI-CDSS using the XAI user guide table (Table 3, Table 4, Table 5), users must answer five key questions related to their system. 
 1.	What is the input data type of the CDSS?
 2.	What is the output type of the CDSS?
 3.	Should the explanation be designed for a specific AI model or work across different models?
