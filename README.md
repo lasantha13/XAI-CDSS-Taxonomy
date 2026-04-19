@@ -5,9 +5,11 @@
 
 This repository accompanies the following publication:
 
->R A D L M K Ranwala 1*, Libby Roughead 1, Jean-Pierre Calabretto 2 and Andre Q. Andrade 1 . "[A Taxonomic Guide to Explainable AI (XAI) Technique 
+>R A D L M K Ranwala 1*, Libby Roughead 1, Jean-Pierre Calabretto 2 and Andre Q. Andrade 1 . "A Taxonomic Guide to Explainable AI (XAI) Technique 
 Selection in Clinical Decision Support Systems
-]". [Information Journal ], [2026]. DOI: [DOI]
+". Information Journal, 2026. DOI: [DOI]
+>
+>1 Adelaide University of South Australia - Quality Use of Medicines and Pharmacy Research Centre, Clinical and Health Sciences, Level 6, Playford Building, Frome Road, Adelaide 5000, South Australia, Australia
 
 This paper presents a taxonomic guide to assist developers and researchers 
 in selecting appropriate Explainable AI (XAI) techniques for AI-based 
