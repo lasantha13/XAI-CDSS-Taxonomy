@@ -4,10 +4,10 @@
 ![Project Logo](ai33.png)
 
 ## Taxonomy Dimensions
-### A. CDSS Input Data Types and Oupt type Classifications
+#### A. CDSS Input Data Types and Oupt type Classifications
 1. [Table 1: CDSS input data types](#input_datatypes)
 2. [Table 2: CDSS Output types](#output_types)
-### [B.XAI classification dimensions](#xai_classification) 
+#### [B.XAI classification dimensions](#xai_classification) 
 
 ## Selection Guide Tables
 1. [Table 3: XAI Techniques in CDSS with Structured Data Inputs](#structured_data)
@@ -65,7 +65,10 @@ Table 2 : CDSS Outtypes
 >2.	XAI Approach: Particular XAI methods can be developed during model training through in-built interpretability or after model development using post-hoc methods 
 >3.	XAI Explanation Scope: In the context of XAI, the scope of explanations can be categorised as either global explanations, which provide insights into the overall model behaviour, or local explanations, which focus on individual predictions. 
 
-## Structured_Data
+
+
+## Selection Guide Tables
+### Structured_Data
 ### Table 3: XAI Techniques in CDSS with Structured Data Inputs                  
 [Back](#table_of_contents)
 
